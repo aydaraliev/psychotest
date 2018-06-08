@@ -34,21 +34,24 @@ export class LanguageService {
   }
 
   saveResults (object: any) {
-    this.object = object;
+    return localStorage.setItem('results', JSON.stringify(object));
   };
 
   getResultsText (object: any): Observable<Object> {
-    const url = `${this.apiUrl}/user`;
+    const url = `${this.apiUrl}/results`;
+    console.log(object)
 
     return this.http.get<Object>(url, object);
   }
 
   sendUser (object: any): Observable<Object> {
-    const url = `${this.apiUrl}/results`;
+    const url = `${this.apiUrl}/user`;
     const sendingObject = {
       user: object,
-      results: this.object
+      results: JSON.parse(localStorage.getItem('results'))
     };
+    console.log(sendingObject)
+    localStorage.removeItem('results')
     return this.http.post<Object>(url, sendingObject, httpOptions);
   }
 
