@@ -34,17 +34,26 @@ export class LanguageService {
   }
 
   saveResults (object: any) {
+<<<<<<< HEAD
     return localStorage.setItem('results', JSON.stringify(object));
   };
 
   getResultsText (object: any): Observable<Object> {
     const url = `${this.apiUrl}/results`;
     console.log(object)
+=======
+    this.object = object;
+  };
+
+  getResultsText (object: any): Observable<Object> {
+    const url = `${this.apiUrl}/user`;
+>>>>>>> 847119bdfaf9dc2cfe35158144da5e300073d5d4
 
     return this.http.get<Object>(url, object);
   }
 
   sendUser (object: any): Observable<Object> {
+<<<<<<< HEAD
     const url = `${this.apiUrl}/user`;
     const sendingObject = {
       user: object,
@@ -52,6 +61,13 @@ export class LanguageService {
     };
     console.log(sendingObject)
     localStorage.removeItem('results')
+=======
+    const url = `${this.apiUrl}/results`;
+    const sendingObject = {
+      user: object,
+      results: this.object
+    };
+>>>>>>> 847119bdfaf9dc2cfe35158144da5e300073d5d4
     return this.http.post<Object>(url, sendingObject, httpOptions);
   }
 
