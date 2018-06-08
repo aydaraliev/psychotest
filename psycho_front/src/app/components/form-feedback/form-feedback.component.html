@@ -1,0 +1,29 @@
+<form class="container-fluid item-container new-page" onsubmit="onSubmit()">
+  <h1>{{title[lang]}}</h1>
+  <p>{{subtitle[lang]}}</p>
+
+  <div class="form-group">
+    <label for="dob">{{dob[lang]}}</label>
+    <input class="form-control" id="dob" name="dob" type="date">
+  </div>
+
+  <div class="form-group">
+    <label for="country">{{country[lang]}}</label>
+    <select class="form-control" name="country" id="country">
+      <option value="1">1</option>
+      <option value="2">2</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="gender">{{gender[lang]}}</label>
+    <select class="form-control" name="gender" id="gender">
+      <option value="1">1</option>
+      <option value="2">2</option>
+    </select>
+  </div>
+
+  <div class="form-group row justify-content-end">
+    <button (click)="onSubmit()" class="form-button form-button--submit" type="submit">Отправить</button>
+  </div>
+</form>

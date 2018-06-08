@@ -1,0 +1,136 @@
+.tags-container {
+  padding: 2em 0;
+  float: left;
+  width: 100%;
+}
+
+.tag {
+  padding: .3em .9em;
+  background-color: white;
+  box-shadow: 0 3px 4px 0 rgba(0,0,0,0.35);
+  border-radius: 0;
+  color: #181a27;
+  display: inline-block;
+  margin-right: .5em;
+  font-size: 18px;
+  margin-top: 10px;
+  transition: all .3s;
+  float: left;
+
+  &--selected {
+    background-color: #ffb81c;
+    color: #181a27;
+    cursor: default;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.tests {
+  padding: 60px 0;
+  min-height: 600px;
+}
+
+.item-card {
+  position: relative;
+  background-color: #2E3B51;
+  border: 3px solid white;
+  border-radius: 0;
+  margin: 2em auto .5em;
+  text-align: center;
+  height: 500px;
+  float: left;
+
+  h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #fff;
+    padding: 3rem 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .image-container {
+    max-height: 150px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      display: inline-block;
+      width: 100%;
+      border: 0;
+      vertical-align: middle;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .image-overlay {
+      background-color: rgba(145,185,164,0.85);
+      width: 100%;
+      height: 264px;
+      position: absolute;
+      bottom: 0;
+      text-align: center;
+      opacity: 0;
+      transition: all .3s;
+    }
+
+    span {
+      position: absolute;
+      font-size: 20px;
+      color: white;
+      bottom: 61px;
+      left: 120px;
+    }
+
+    &:hover {
+      .image-overlay {
+        opacity: .9;
+      }
+    }
+  }
+
+  p {
+    height: 120px;
+    color: #fff;
+    padding: 2rem 1.5rem;
+    font-size: 16px;
+    margin: 0 0 10px;
+  }
+
+  .start {
+    display: block;
+    color: #181a27 !important;
+    background-color: #ffb81c;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,0.35);
+    border-radius: 0;
+    font-weight: 300;
+    padding: .3em 1em;
+    border: 3px solid #ffb81c;
+    transition: all .3s;
+    margin: 20px auto;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.time {
+  color: #35445D;
+  border-radius: 100px;
+  border: 2px solid #181a27;
+  width: 57px;
+  height: 57px;
+  position: absolute;
+  top: -28.5px;
+  right: -20px;
+  background-color: white;
+  font-weight: 500;
+  line-height: 1;
+  font-size: 16px;
+  padding: 10px;
+}
