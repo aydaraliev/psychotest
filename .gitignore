@@ -1,0 +1,37 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+psycho_front/dist
+psycho_front/dist-server
+psycho_front/tmp
+psycho_front/out-tsc
+
+# dependencies
+psycho_front/node_modules
+
+# IDEs and editors
+.idea
+psycho_front.project
+psycho_front.classpath
+psycho_front.c9/
+*.launch
+psycho_front.settings/
+*.sublime-workspace
+
+# misc
+psycho_front/.sass-cache
+psycho_front/connect.lock
+psycho_front/coverage
+psycho_front/libpeerconnection.log
+psycho_frontnpm-debug.log
+psycho_frontyarn-error.log
+psycho_fronttestem.log
+psycho_front/typings
+
+# e2e
+psycho_front/e2e/*.js
+psycho_front/e2e/*.map
+
+# System Files
+psycho_front.DS_Store
+psycho_frontThumbs.db

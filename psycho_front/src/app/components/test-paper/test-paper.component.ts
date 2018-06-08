@@ -42,7 +42,6 @@ export class TestPaperComponent implements OnInit, DoCheck {
     this.langService.getQuestions(1)
       .subscribe(
         response => {
-          console.log(response.questions[this.currentQuestion]); // TODO check this
           this.title = response.name;
           this.questions = response.questions;
         },
@@ -66,7 +65,21 @@ export class TestPaperComponent implements OnInit, DoCheck {
       this.currentQuestion += 1;
     } else {
       this.questions[this.currentQuestion].value = value;
-      this.router.navigate(['/voted']);
+      const sendingObject = {
+        extraversion: this.extraversion,
+        neuroticism: this.neuroticism,
+        openness: this.openness,
+        consciousness: this.consciousness,
+        friendly: this.friendly
+      };
+
+      this.langService.saveResults(sendingObject);
+
+      this.langService.getResultsText(sendingObject).subscribe(response => {
+        this.langService.saveResultsText(response)
+      });
+
+      this.router.navigate(['/feedback']);
     }
   }
 
