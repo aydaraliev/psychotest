@@ -1,3 +1,25 @@
+POST http://localhost:5000/CRUD/tests/test_test
+Accept: application/json
+Cache-Control: no-cache
+
+<> 2018-06-08T112357.201.json
+
+###
+
+POST http://localhost:5000/CRUD/questions/1
+Content-Type: application/json
+
+{ "questions" :
+  {
+  "question1" : ["привет", "салам"],
+  "question2" : ["привет. как дела?", "салам. иштерин кандай?"]
+  }
+}
+
+<> 2018-06-08T112348.200.json
+
+###
+
 POST http://188.166.88.156/CRUD/tests/test_test
 Accept: application/json
 Cache-Control: no-cache
@@ -413,21 +435,6 @@ Accept: application/json
 Cache-Control: no-cache
 
 <> 2018-06-07T065047.201.json
-
-###
-
-POST http://localhost:5000/CRUD/tests/test_test
-Accept: application/json
-Cache-Control: no-cache
-
-<> 2018-06-07T064928.500.html
-
-###
-
-GET http://localhost:5000/tests/1
-Accept: application/json
-
-<> 2018-06-07T064706.200.json
 
 ###
 

@@ -13,28 +13,39 @@ class UserModel(db.Model):
     consciousness = db.Column(db.Integer)
     friendly = db.Column(db.Integer)
 
-    birthday = db.Column(db.Date)
-    sex = db.Column(db.String)
-    nationality = db.Column(db.String)
+    city = db.Column(db.String)
+    country = db.Column(db.String)
+    dob = db.Column(db.Date)
     education = db.Column(db.String)
-    martial_status = db.Column(db.String)
-    employment = db.Column(db.String)
-    region = db.Column(db.String)
+    email = db.Column(db.String)
+    family = db.Column(db.String)
+    gender = db.Column(db.String)
+    nationality = db.Column(db.String)
+    sendEmail = db.Column(db.Boolean)
+    work = db.String
 
     def __init__(self, extraversion, neuroticism, openness, consciousness, friendly,
-                 birthday, sex, region, education, nationality = None, martial_status = None, employment = None):
+                 city, country, dob, education, email, gender, nationality, family = None, work = None, sendEmail = False):
         self.extraversion = extraversion
         self.neuroticism = neuroticism
         self.openness = openness
         self.consciousness = consciousness
         self.friendly = friendly
-        self.birthday = birthday
-        self.sex = sex
+
+        self.dob = dob
+        self.gender = gender
         self.nationality = nationality
         self.education = education
-        self.martial_status = martial_status
-        self.employment = employment
-        self.region = region
+        self.family = family
+        self.work = work
+        self.city = city
+        self.country = country
+        self.email = email
+
+    def calculate_results(self):
+        return [{"title": 'extraversion', "subtitle": "bla bla", "text": "bla bla"},
+         {"title": "neuroticism", "subtitle": "zaebal etet test", "text": "bla bla"}]
+
 
     def save_to_db(self):
         db.session.add(self)
@@ -44,9 +55,13 @@ class UserModel(db.Model):
         db.session.delete(self)
         db.session.commit()
 
-class VoterModel(db.Model):
+
+
+'''class VoterModel(db.Model):
 
     __tablename__ = 'voters'
+
+    id = db.Column(db.Integer, primary_key=True)
 
     first_name = db.Column(db.String)
     last_name = db.Column(db.String)
@@ -66,4 +81,4 @@ class VoterModel(db.Model):
         return cls.query.filter_by(first_name = first_name).filter_by(last_name = last_name)
 
     def json(self):
-        return {"voting_place" : self.voting_place}
+        return {"voting_place" : self.voting_place}'''
