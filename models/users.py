@@ -2,21 +2,39 @@ from db import db
 
 
 class UserModel(db.Model):
+
     __tablename__ = 'users'
 
     id = db.Column(db.Integer, primary_key=True)
+
     extraversion = db.Column(db.Integer)
     neuroticism  = db.Column(db.Integer)
     openness = db.Column(db.Integer)
     consciousness = db.Column(db.Integer)
     friendly = db.Column(db.Integer)
 
-    def __init__(self, extraversion, neuroticism, openness, consciousness, friendly):
+    birthday = db.Column(db.Date)
+    sex = db.Column(db.String)
+    nationality = db.Column(db.String)
+    education = db.Column(db.String)
+    martial_status = db.Column(db.String)
+    employment = db.Column(db.String)
+    region = db.Column(db.String)
+
+    def __init__(self, extraversion, neuroticism, openness, consciousness, friendly,
+                 birthday, sex, region, education, nationality = None, martial_status = None, employment = None):
         self.extraversion = extraversion
         self.neuroticism = neuroticism
         self.openness = openness
         self.consciousness = consciousness
         self.friendly = friendly
+        self.birthday = birthday
+        self.sex = sex
+        self.nationality = nationality
+        self.education = education
+        self.martial_status = martial_status
+        self.employment = employment
+        self.region = region
 
     def save_to_db(self):
         db.session.add(self)
@@ -25,3 +43,27 @@ class UserModel(db.Model):
     def delete_from_db(self):
         db.session.delete(self)
         db.session.commit()
+
+class VoterModel(db.Model):
+
+    __tablename__ = 'voters'
+
+    first_name = db.Column(db.String)
+    last_name = db.Column(db.String)
+    patronym = db.Column(db.String)
+    voting_place = db.Column(db.Text)
+
+    def __init__(self, first_name, last_name, patronym, voting_place):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.patronym = patronym
+        self.voting_place = voting_place
+
+    @classmethod
+    def find_by_f_l_name(cls, first_name, last_name):
+        first_name = first_name.upper()
+        last_name = last_name.upper()
+        return cls.query.filter_by(first_name = first_name).filter_by(last_name = last_name)
+
+    def json(self):
+        return {"voting_place" : self.voting_place}

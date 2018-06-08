@@ -1,3 +1,76 @@
+POST http://188.166.88.156/CRUD/tests/test_test
+Accept: application/json
+Cache-Control: no-cache
+
+<> 2018-06-08T080720.404.html
+
+###
+
+POST http://188.166.88.156/CRUD/tests/test_test
+Accept: application/json
+Cache-Control: no-cache
+
+<> 2018-06-08T080713.404.html
+
+###
+
+GET http://188.166.88.156/tests/1
+Accept: application/json
+
+<> 2018-06-08T080659.404.html
+
+###
+
+GET http://188.166.88.156/tests/1
+Accept: application/json
+
+<> 2018-06-08T072611.404.html
+
+###
+
+GET http://188.166.88.156/tests/1
+Accept: application/json
+
+<> 2018-06-08T072604.404.html
+
+###
+
+GET http://188.166.88.156/tests/1
+Accept: application/json
+
+<> 2018-06-08T072235.404.html
+
+###
+
+GET http://188.166.88.156/tests/1
+Accept: application/json
+
+<> 2018-06-08T072130.404.html
+
+###
+
+GET http://188.166.88.156/tests/1
+Accept: application/json
+
+<> 2018-06-08T071412.404.html
+
+###
+
+POST http://188.166.88.156/CRUD/tests/test_test
+Accept: application/json
+Cache-Control: no-cache
+
+<> 2018-06-08T044848.404.html
+
+###
+
+GET http://188.166.88.156/CRUD/questions/1
+Accept: application/json
+
+<> 2018-06-08T044834.404.html
+
+###
+
 GET http://188.166.88.156/CRUD/questions/1
 Accept: application/json
 
@@ -355,91 +428,6 @@ GET http://localhost:5000/tests/1
 Accept: application/json
 
 <> 2018-06-07T064706.200.json
-
-###
-
-POST http://localhost:5000/CRUD/questions/1
-Content-Type: application/json
-
-{ "questions" :
-  {
-  "question1" : ["привет", "салам"],
-  "question2" : ["привет. как дела?", "салам. иштерин кандай?"]
-  }
-}
-
-<> 2018-06-07T064702.200.json
-
-###
-
-POST http://localhost:5000/CRUD/tests/test_test
-Accept: application/json
-Cache-Control: no-cache
-
-<> 2018-06-07T064659.201.json
-
-###
-
-GET http://localhost:5000/tests/1
-Accept: application/json
-
-<> 2018-06-07T064129.200.json
-
-###
-
-GET http://localhost:5000/tests/1
-Accept: application/json
-
-<> 2018-06-07T064110.500.html
-
-###
-
-POST http://localhost:5000/CRUD/questions/1
-Content-Type: application/json
-
-{ "questions" :
-  {
-  "question1" : ["привет", "салам"],
-  "question2" : ["привет. как дела?", "салам. иштерин кандай?"]
-  }
-}
-
-<> 2018-06-07T064104.200.json
-
-###
-
-GET http://localhost:5000/tests/1
-Accept: application/json
-
-<> 2018-06-07T063604.500.html
-
-###
-
-GET http://localhost:5000/tests/1
-Accept: application/json
-
-<> 2018-06-07T063416.500.html
-
-###
-
-GET http://localhost:5000/tests/1
-Accept: application/json
-
-<> 2018-06-07T063345.200.json
-
-###
-
-GET http://localhost:5000/tests/1
-Accept: application/json
-
-<> 2018-06-07T063329.200.json
-
-###
-
-GET http://localhost:5000/tests/1
-Accept: application/json
-
-<> 2018-06-07T063252.200.json
 
 ###
 
