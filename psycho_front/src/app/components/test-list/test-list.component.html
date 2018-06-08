@@ -1,0 +1,49 @@
+<div class="container-fluid item-container new-page">
+  {{testsPhrase[lang]}}
+
+  <div class="tags-container">
+    <div
+      *ngFor="let tag of tags"
+      [ngClass]="{
+      'tag':true,
+      'tag--selected': selectedTag === tag.id
+      }"
+      (click)="selectTag(tag.id)"
+    >
+      {{tag.title[lang]}}
+    </div>
+  </div>
+
+  <div class="tests">
+    <div class="col-xs-12 col-sm-4 col-lg-4 item-card-container" *ngFor="let test of tests">
+      <div class="item-card" *ngIf="test.tags.includes(selectedTag)">
+        <h3>{{test.title[lang]}}</h3>
+
+        <div class="time">
+          <span>{{test.time}} мин</span>
+        </div>
+
+        <div class="image-container">
+          <a routerLink="/tests/{{test.id}}">
+            <div class="image-overlay">
+              <span>СТАРТ</span>
+            </div>
+            <img src={{test.img}} alt="image">
+          </a>
+        </div>
+
+        <p>
+          {{test.desc[lang]}}
+        </p>
+
+        <div class="bottom text-center">
+          <button class="start" routerLink="/tests/{{test.id}}">
+            Старт
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>

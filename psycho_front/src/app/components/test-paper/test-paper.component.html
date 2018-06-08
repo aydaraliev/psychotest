@@ -1,0 +1,56 @@
+<app-progress [currentPercent]="currentPercent"></app-progress>
+
+<div class="container-fluid item-container new-page">
+  <p class="test-title">{{title}}</p>
+
+  <div class="col-md-12 text-center" *ngIf="questions.length > 0">
+    <div class="question">
+      {{questions[currentQuestion].ru_words}}
+    </div>
+  </div>
+
+  <div
+    (click)="onBack()"
+    [ngClass]="{
+      'navigation nav-left':true,
+      'd-none': currentQuestion === 0
+      }"
+  >
+    <
+  </div>
+  <div
+    [ngClass]="{
+      'navigation nav-right':true,
+      'd-none':currentQuestion === questions.length - 1
+      }"
+    (click)="onForward()"
+  >
+    >
+  </div>
+
+  <div class="row justify-content-center" *ngIf="questions.length > 0">
+    <div class="options" *ngFor="let answer of answers">
+      <div class="option-container">
+        <div
+          (click)="onAnswer(answer.value)"
+          [ngClass]="{
+          'option': true,
+          'option-selected': answer.value === questions[currentQuestion].value
+          }"
+        >
+          {{answer.title[lang]}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<app-results
+  [extraversion]="extraversion"
+  [neuroticism]="neuroticism"
+  [openness]="openness"
+  [consciousness]="consciousness"
+  [friendly]="friendly"
+>
+</app-results>

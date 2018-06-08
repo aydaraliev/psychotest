@@ -1,0 +1,16 @@
+<div class="container-fluid item-container new-page">
+
+    <div class="form-group" >
+      <label for="first">Старше 18</label>
+      <input id="first" type="checkbox" [(ngModel)]="first" [ngModelOptions]="{standalone: true}">
+    </div>
+
+    <div class="form-group">
+      <label for="second">Второе условие</label>
+      <input id="second" type="checkbox" [(ngModel)]="second" [ngModelOptions]="{standalone: true}">
+    </div>
+
+    <button class="default-button" [disabled]="!first || !second" routerLink="/tests/1">
+      Далее
+    </button>
+</div>

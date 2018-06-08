@@ -1,0 +1,40 @@
+footer {
+  width: 100%;
+  font-style: normal;
+  color: #fff;
+  background-color: #181a27;
+  padding: 20px 0;
+  height: 100%;
+}
+
+p {
+  margin-bottom: 0;
+  font-size: 12px;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 0 10px 0;
+  margin-top: 0;
+}
+
+.border-dot {
+  border-right: 1px solid;
+
+  &:last-child {
+    border-right: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+@media (max-width: 400px) {
+  .row {
+    display: block;
+  }
+}

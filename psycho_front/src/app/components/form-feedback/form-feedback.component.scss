@@ -1,0 +1,54 @@
+h1 {
+  font-size: 24px;
+  padding-bottom: 1em;
+}
+
+p {
+  margin: 0 0 10px
+}
+
+.form-group {
+  margin-bottom: 15px;
+
+  label {
+    font-weight: 300;
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+  }
+}
+
+.form-button {
+  margin-right: 10px;
+  color: #181a27;
+  background-color: transparent;
+  box-shadow: none;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  &--submit {
+    color: #181a27 !important;
+    background-color: #ffb81c;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,0.35);
+    border-radius: 0;
+    font-weight: 300;
+    padding: .3em 1em;
+    border: 3px solid #ffb81c;
+    transition: all .3s;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+}

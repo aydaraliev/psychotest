@@ -1,0 +1,21 @@
+<div class="container-fluid item-container new-page">
+  <h1>{{thanks[lang]}}</h1>
+
+  <div class="col-md-12">
+    <div *ngFor="let result of info">
+      <h2>{{result.title[lang]}}</h2>
+      <p class="text-highlight">{{result.subtitle[lang]}}</p>
+      <p>{{result.body[lang]}}}</p>
+      <p>
+        <strong>{{questionLabel[lang]}}</strong>
+        <em>{{result.body[lang]}}</em>
+      </p>
+    </div>
+  </div>
+
+  <div class="container-fluid text-center">
+    <button routerLink="/tests">
+      {{buttons[0].text[lang]}}
+    </button>
+  </div>
+</div>
