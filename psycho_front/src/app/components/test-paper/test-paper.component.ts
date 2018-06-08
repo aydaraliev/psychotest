@@ -42,7 +42,6 @@ export class TestPaperComponent implements OnInit, DoCheck {
     this.langService.getQuestions(1)
       .subscribe(
         response => {
-          console.log(response.questions[this.currentQuestion]); // TODO check this
           this.title = response.name;
           this.questions = response.questions;
         },
@@ -73,7 +72,13 @@ export class TestPaperComponent implements OnInit, DoCheck {
         consciousness: this.consciousness,
         friendly: this.friendly
       };
-      console.log(sendingObject);
+
+      this.langService.saveResults(sendingObject);
+
+      this.langService.getResultsText(sendingObject).subscribe(response => {
+        this.langService.saveResultsText(response)
+      });
+
       this.router.navigate(['/feedback']);
     }
   }

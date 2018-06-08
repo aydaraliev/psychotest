@@ -1,11 +1,12 @@
 import { Component, DoCheck } from '@angular/core';
-// import { LanguageService } from '../../services/language.service';
+import { LanguageService } from '../../services/language.service';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form-feedback',
   templateUrl: './form-feedback.component.html',
-  styleUrls: ['./form-feedback.component.scss']
+  styleUrls: ['./form-feedback.component.scss'],
+  providers: [LanguageService]
 })
 
 export class FormFeedbackComponent implements DoCheck {
@@ -29,7 +30,7 @@ export class FormFeedbackComponent implements DoCheck {
   sendEmail = '';
 
   constructor(
-    // private langService: LanguageService,
+    private langService: LanguageService,
     private router: Router
   ) { }
 
@@ -50,7 +51,7 @@ export class FormFeedbackComponent implements DoCheck {
       email: this.email,
       sendEmail: this.sendEmail
     };
-    console.log(sendingObject);
+    this.langService.sendUser(sendingObject);
     this.router.navigate(['/results']);
   }
 }
