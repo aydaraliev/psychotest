@@ -4,11 +4,12 @@ from flask import Flask
 from flask_restful import Api
 from flask_cors import CORS
 
-from resources.test import Test, CRUDTest
-from resources.question import CRUDquestions
-from resources.user import User
+from resources.test import TestModel, Test, CRUDTest
+from resources.question import QuestionModel, CRUDquestions
+from resources.user import UserModel, User
 
 app = Flask(__name__)
+app.config['DEBUG'] = True
 CORS(app)
 
 api = Api(app)
@@ -17,11 +18,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:/
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['PROPAGATE_EXCEPTIONS'] = True
 app.secret_key = 'rust4m'
-
-
-@app.before_first_request
-def create_tables():
-    db.create_all()
 
 
 # CRUD
@@ -36,4 +32,11 @@ if __name__ == '__main__':
     from db import db
 
     db.init_app(app)
-    app.run(port=5000, debug=True)
+
+    if app.config['DEBUG']:
+        @app.before_first_request
+        def create_tables():
+            db.create_all()
+
+    app.run(port=5000)
+

@@ -1,3 +1,84 @@
+GET http://188.166.88.156/CRUD/questions/1
+Accept: application/json
+
+<> 2018-06-08T042431.404.html
+
+###
+
+GET http://188.166.88.156/tests/1
+Accept: application/json
+
+<> 2018-06-08T032250.404.html
+
+###
+
+GET http://188.166.88.156:5000/tests/1
+Accept: application/json
+
+###
+
+POST http://188.166.88.156/CRUD/tests/test_test
+Accept: application/json
+Cache-Control: no-cache
+
+<> 2018-06-08T032242.404.html
+
+###
+
+POST http://188.166.88.156/CRUD/questions/1
+Content-Type: application/json
+
+{ "questions" :
+  {
+  "question1" : ["привет", "салам"],
+  "question2" : ["привет. как дела?", "салам. иштерин кандай?"]
+  }
+}
+
+<> 2018-06-08T032224.404.html
+
+###
+
+POST http://188.166.88.156:5000/CRUD/questions/1
+Content-Type: application/json
+
+{ "questions" :
+  {
+  "question1" : ["привет", "салам"],
+  "question2" : ["привет. как дела?", "салам. иштерин кандай?"]
+  }
+}
+
+###
+
+POST http://188.166.88.156:5000/CRUD/tests/test_test
+Accept: application/json
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:5000/tests/1
+Accept: application/json
+
+###
+
+GET http://localhost:5000/tests/1
+Accept: application/json
+
+###
+
+POST http://localhost:5000/CRUD/questions/1
+Content-Type: application/json
+
+{ "questions" :
+  {
+  "question1" : ["привет", "салам"],
+  "question2" : ["привет. как дела?", "салам. иштерин кандай?"]
+  }
+}
+
+###
+
 POST http://localhost:5000/CRUD/tests/test_test
 Accept: application/json
 Cache-Control: no-cache
@@ -359,74 +440,6 @@ GET http://localhost:5000/tests/1
 Accept: application/json
 
 <> 2018-06-07T063252.200.json
-
-###
-
-GET http://localhost:5000/tests/1
-Accept: application/json
-
-<> 2018-06-07T063234.500.html
-
-###
-
-GET http://localhost:5000/tests/1
-Accept: application/json
-
-###
-
-GET http://localhost:5000/tests/1
-Accept: application/json
-
-<> 2018-06-07T063038.500.html
-
-###
-
-GET http://localhost:5000/tests/1
-Accept: application/json
-
-<> 2018-06-07T063021.500.html
-
-###
-
-GET http://localhost:5000/tests/1
-Accept: application/json
-
-<> 2018-06-07T061600.200.json
-
-###
-
-GET http://localhost:5000/tests/1
-Accept: application/json
-
-<> 2018-06-07T061525.500.html
-
-###
-
-GET http://localhost:5000/tests/1
-Accept: application/json
-
-<> 2018-06-07T061334.500.html
-
-###
-
-GET http://localhost:5000/tests/1
-Accept: application/json
-
-<> 2018-06-07T061207.200.json
-
-###
-
-GET http://localhost:5000/tests/1
-Accept: application/json
-
-<> 2018-06-07T061152.500.html
-
-###
-
-GET http://localhost:5000/tests/1
-Accept: application/json
-
-<> 2018-06-07T060850.500.html
 
 ###
 
