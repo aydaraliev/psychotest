@@ -52,3 +52,13 @@ p {
     cursor: pointer;
   }
 }
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  input {
+    width: 15px;
+    margin-left: 25px;
+  }
+}

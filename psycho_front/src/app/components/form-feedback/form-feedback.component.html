@@ -1,26 +1,92 @@
 <form class="container-fluid item-container new-page" onsubmit="onSubmit()">
-  <h1>{{title[lang]}}</h1>
-  <p>{{subtitle[lang]}}</p>
+  <h1>Информация о респонденте</h1>
 
   <div class="form-group">
-    <label for="dob">{{dob[lang]}}</label>
+    <label for="dob">Год рождения</label>
     <input class="form-control" id="dob" name="dob" type="date">
   </div>
 
   <div class="form-group">
-    <label for="country">{{country[lang]}}</label>
-    <select class="form-control" name="country" id="country">
-      <option value="1">1</option>
-      <option value="2">2</option>
+    <label for="gender">Пол</label>
+    <select class="form-control" name="gender" id="gender">
+      <option value="male">Мужчина</option>
+      <option value="female">Женщина</option>
+      <option value="no-answer">Предпочту не отвечать</option>
     </select>
   </div>
 
   <div class="form-group">
-    <label for="gender">{{gender[lang]}}</label>
-    <select class="form-control" name="gender" id="gender">
-      <option value="1">1</option>
-      <option value="2">2</option>
+    <label for="country">Гражданство</label>
+    <input class="form-control" id="country" name="country" type="text" value="Кыргызская Республика">
+  </div>
+
+  <div class="form-group">
+    <label for="nationality">Национальность</label>
+    <select class="form-control" name="nationality" id="nationality">
+      <option value="kg">Мужчина</option>
+      <option value="ru">Женщина</option>
+      <option value="another">Другое</option>
+      <option value="no-answer">Предпочту не отвечать</option>
     </select>
+  </div>
+
+  <div class="form-group">
+    <label for="education">Образование</label>
+    <select class="form-control" name="education" id="education">
+      <option value="no">Нет формального образования</option>
+      <option value="initial">Начальное</option>
+      <option value="average">Среднее</option>
+      <option value="technical">Техническое</option>
+      <option value="baccalaureate">Бакалавриат</option>
+      <option value="master">Магистр</option>
+      <option value="doctoral">Докторское и выше</option>
+      <option value="another">Другое</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="family">Семейный статус</label>
+    <select class="form-control" name="family" id="family">
+      <option value="have">Женат/Замужем</option>
+      <option value="no">Холост/ Не замужем</option>
+      <option value="another">Другое</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="work">Занятость</label>
+    <select class="form-control" name="work" id="work">
+      <option value="have">Трудоустроен</option>
+      <option value="business">Частный предприниматель</option>
+      <option value="no">Не работаю</option>
+      <option value="student">Студент</option>
+      <option value="old">Пенсионер</option>
+      <option value="another">Другое</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="city">Область/город проживания</label>
+    <select class="form-control" name="city" id="city">
+      <option value="bishkek">г. Бишкек</option>
+      <option value="batken">Баткен</option>
+      <option value="djalal-abad">Джалал-Абад</option>
+      <option value="issik-kul">Иссык-Куль</option>
+      <option value="naryn">Нарын</option>
+      <option value="osh">Ош</option>
+      <option value="talas">Талас</option>
+      <option value="chui">Чуй</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Ваш email (Результаты опросника будут отправлены в том числе на вашу почту)*</label>
+    <input class="form-control" id="email" name="email" type="email">
+  </div>
+
+  <div class="form-group checkbox">
+    <label for="sendEmail">Отправить результаты исследования по почте</label>
+    <input class="form-control" id="sendEmail" name="sendEmail" type="checkbox">
   </div>
 
   <div class="form-group row justify-content-end">
