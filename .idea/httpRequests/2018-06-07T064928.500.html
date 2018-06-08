@@ -1,0 +1,721 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>TypeError: 'charset' is an invalid keyword argument for this function // Werkzeug Debugger</title>
+    <link rel="stylesheet" href="?__debugger__=yes&amp;cmd=resource&amp;f=style.css"
+          type="text/css">
+    <!-- We need to make sure this has a favicon so that the debugger does
+         not by accident trigger a request to /favicon.ico which might
+         change the application state. -->
+    <link rel="shortcut icon"
+          href="?__debugger__=yes&amp;cmd=resource&amp;f=console.png">
+    <script src="?__debugger__=yes&amp;cmd=resource&amp;f=jquery.js"></script>
+    <script src="?__debugger__=yes&amp;cmd=resource&amp;f=debugger.js"></script>
+    <script type="text/javascript">
+        var TRACEBACK = 140330002909112,
+            CONSOLE_MODE = false,
+            EVALEX = true,
+            EVALEX_TRUSTED = false,
+            SECRET = "uwwwjNoSY8BbsvSRfwcF";
+    </script>
+</head>
+<body style="background-color: #fff">
+<div class="debugger">
+    <h1>builtins.TypeError</h1>
+    <div class="detail">
+        <p class="errormsg">TypeError: 'charset' is an invalid keyword argument for this function</p>
+    </div>
+    <h2 class="traceback">Traceback <em>(most recent call last)</em></h2>
+    <div class="traceback">
+
+        <ul>
+            <li>
+                <div class="frame" id="frame-140330002909168">
+                    <h4>File <cite class="filename">"/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask/app.py"</cite>,
+                        line <em class="line">2309</em>,
+                        in <code class="function">__call__</code></h4>
+                    <div class="source">
+                        <pre class="line before"><span class="ws"></span> </pre>
+                        <pre class="line before"><span class="ws">    </span>def __call__(self, environ, start_response):</pre>
+                        <pre class="line before"><span class="ws">        </span>&quot;&quot;&quot;The WSGI server calls the Flask application object as the</pre>
+                        <pre class="line before"><span class="ws">        </span>WSGI application. This calls :meth:`wsgi_app` which can be</pre>
+                        <pre class="line before"><span class="ws">        </span>wrapped to applying middleware.&quot;&quot;&quot;</pre>
+                        <pre class="line current"><span class="ws">        </span>return self.wsgi_app(environ, start_response)</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span class="ws">    </span>def __repr__(self):</pre>
+                        <pre class="line after"><span class="ws">        </span>return '&lt;%s %r&gt;' % (</pre>
+                        <pre class="line after"><span class="ws">            </span>self.__class__.__name__,</pre>
+                        <pre class="line after"><span class="ws">            </span>self.name,</pre>
+                    </div>
+                </div>
+
+            <li>
+                <div class="frame" id="frame-140330005780016">
+                    <h4>File <cite class="filename">"/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask/app.py"</cite>,
+                        line <em class="line">2295</em>,
+                        in <code class="function">wsgi_app</code></h4>
+                    <div class="source">
+                        <pre class="line before"><span class="ws">            </span>try:</pre>
+                        <pre class="line before"><span class="ws">                </span>ctx.push()</pre>
+                        <pre class="line before"><span class="ws">                </span>response = self.full_dispatch_request()</pre>
+                        <pre class="line before"><span class="ws">            </span>except Exception as e:</pre>
+                        <pre class="line before"><span class="ws">                </span>error = e</pre>
+                        <pre class="line current"><span class="ws">                </span>response = self.handle_exception(e)</pre>
+                        <pre class="line after"><span class="ws">            </span>except:</pre>
+                        <pre class="line after"><span class="ws">                </span>error = sys.exc_info()[1]</pre>
+                        <pre class="line after"><span class="ws">                </span>raise</pre>
+                        <pre class="line after"><span class="ws">            </span>return response(environ, start_response)</pre>
+                        <pre class="line after"><span class="ws">        </span>finally:</pre>
+                    </div>
+                </div>
+
+            <li>
+                <div class="frame" id="frame-140329983667224">
+                    <h4>File <cite class="filename">"/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask_restful/__init__.py"</cite>,
+                        line <em class="line">273</em>,
+                        in <code class="function">error_router</code></h4>
+                    <div class="source">
+                        <pre class="line before"><span class="ws">        </span>if self._has_fr_route():</pre>
+                        <pre class="line before"><span class="ws">            </span>try:</pre>
+                        <pre class="line before"><span
+                                class="ws">                </span>return self.handle_error(e)</pre>
+                        <pre class="line before"><span class="ws">            </span>except Exception:</pre>
+                        <pre class="line before"><span class="ws">                </span>pass  # Fall through to original handler</pre>
+                        <pre class="line current"><span class="ws">        </span>return original_handler(e)</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span class="ws">    </span>def handle_error(self, e):</pre>
+                        <pre class="line after"><span class="ws">        </span>&quot;&quot;&quot;Error handler for the API transforms a raised exception into a Flask</pre>
+                        <pre class="line after"><span class="ws">        </span>response, with the appropriate HTTP status code and body.</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                    </div>
+                </div>
+
+            <li>
+                <div class="frame" id="frame-140329983667168">
+                    <h4>File <cite class="filename">"/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask/app.py"</cite>,
+                        line <em class="line">1741</em>,
+                        in <code class="function">handle_exception</code></h4>
+                    <div class="source">
+                        <pre class="line before"><span class="ws">            </span># if we want to repropagate the exception, we can attempt to</pre>
+                        <pre class="line before"><span class="ws">            </span># raise it with the whole traceback in case we can do that</pre>
+                        <pre class="line before"><span class="ws">            </span># (the function was actually called from the except part)</pre>
+                        <pre class="line before"><span class="ws">            </span># otherwise, we just raise the error again</pre>
+                        <pre class="line before"><span class="ws">            </span>if exc_value is e:</pre>
+                        <pre class="line current"><span class="ws">                </span>reraise(exc_type, exc_value, tb)</pre>
+                        <pre class="line after"><span class="ws">            </span>else:</pre>
+                        <pre class="line after"><span class="ws">                </span>raise e</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span class="ws">        </span>self.log_exception((exc_type, exc_value, tb))</pre>
+                        <pre class="line after"><span class="ws">        </span>if handler is None:</pre>
+                    </div>
+                </div>
+
+            <li>
+                <div class="frame" id="frame-140329983667336">
+                    <h4>File <cite class="filename">"/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask/_compat.py"</cite>,
+                        line <em class="line">34</em>,
+                        in <code class="function">reraise</code></h4>
+                    <div class="source">
+                        <pre class="line before"><span class="ws">    </span>from inspect import getfullargspec as getargspec</pre>
+                        <pre class="line before"><span class="ws">    </span>from io import StringIO</pre>
+                        <pre class="line before"><span class="ws"></span> </pre>
+                        <pre class="line before"><span class="ws">    </span>def reraise(tp, value, tb=None):</pre>
+                        <pre class="line before"><span class="ws">        </span>if value.__traceback__ is not tb:</pre>
+                        <pre class="line current"><span
+                                class="ws">            </span>raise value.with_traceback(tb)</pre>
+                        <pre class="line after"><span class="ws">        </span>raise value</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span class="ws">    </span>implements_to_string = _identity</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span class="ws"></span>else:</pre>
+                    </div>
+                </div>
+
+            <li>
+                <div class="frame" id="frame-140329983667000">
+                    <h4>File <cite class="filename">"/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask/app.py"</cite>,
+                        line <em class="line">2292</em>,
+                        in <code class="function">wsgi_app</code></h4>
+                    <div class="source">
+                        <pre class="line before"><span
+                                class="ws">        </span>ctx = self.request_context(environ)</pre>
+                        <pre class="line before"><span class="ws">        </span>error = None</pre>
+                        <pre class="line before"><span class="ws">        </span>try:</pre>
+                        <pre class="line before"><span class="ws">            </span>try:</pre>
+                        <pre class="line before"><span class="ws">                </span>ctx.push()</pre>
+                        <pre class="line current"><span class="ws">                </span>response = self.full_dispatch_request()</pre>
+                        <pre class="line after"><span class="ws">            </span>except Exception as e:</pre>
+                        <pre class="line after"><span class="ws">                </span>error = e</pre>
+                        <pre class="line after"><span class="ws">                </span>response = self.handle_exception(e)</pre>
+                        <pre class="line after"><span class="ws">            </span>except:</pre>
+                        <pre class="line after"><span class="ws">                </span>error = sys.exc_info()[1]</pre>
+                    </div>
+                </div>
+
+            <li>
+                <div class="frame" id="frame-140329983667448">
+                    <h4>File <cite class="filename">"/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask/app.py"</cite>,
+                        line <em class="line">1808</em>,
+                        in <code class="function">full_dispatch_request</code></h4>
+                    <div class="source">
+                        <pre class="line before"><span class="ws">        </span>pre and postprocessing as well as HTTP exception catching and</pre>
+                        <pre class="line before"><span class="ws">        </span>error handling.</pre>
+                        <pre class="line before"><span class="ws"></span> </pre>
+                        <pre class="line before"><span class="ws">        </span>.. versionadded:: 0.7</pre>
+                        <pre class="line before"><span class="ws">        </span>&quot;&quot;&quot;</pre>
+                        <pre class="line current"><span class="ws">        </span>self.try_trigger_before_first_request_functions()</pre>
+                        <pre class="line after"><span class="ws">        </span>try:</pre>
+                        <pre class="line after"><span class="ws">            </span>request_started.send(self)</pre>
+                        <pre class="line after"><span class="ws">            </span>rv = self.preprocess_request()</pre>
+                        <pre class="line after"><span class="ws">            </span>if rv is None:</pre>
+                        <pre class="line after"><span
+                                class="ws">                </span>rv = self.dispatch_request()</pre>
+                    </div>
+                </div>
+
+            <li>
+                <div class="frame" id="frame-140329983667504">
+                    <h4>File <cite class="filename">"/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask/app.py"</cite>,
+                        line <em class="line">1855</em>,
+                        in <code class="function">try_trigger_before_first_request_functions</code></h4>
+                    <div class="source">
+                        <pre class="line before"><span class="ws">            </span>return</pre>
+                        <pre class="line before"><span class="ws">        </span>with self._before_request_lock:</pre>
+                        <pre class="line before"><span class="ws">            </span>if self._got_first_request:</pre>
+                        <pre class="line before"><span class="ws">                </span>return</pre>
+                        <pre class="line before"><span class="ws">            </span>for func in self.before_first_request_funcs:</pre>
+                        <pre class="line current"><span class="ws">                </span>func()</pre>
+                        <pre class="line after"><span class="ws">            </span>self._got_first_request = True</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span
+                                class="ws">    </span>def make_default_options_response(self):</pre>
+                        <pre class="line after"><span class="ws">        </span>&quot;&quot;&quot;This method is called to create the default ``OPTIONS`` response.</pre>
+                        <pre class="line after"><span class="ws">        </span>This can be changed through subclassing to change the default</pre>
+                    </div>
+                </div>
+
+            <li>
+                <div class="frame" id="frame-140329983667560">
+                    <h4>File <cite class="filename">"/home/aydar/PycharmProjects/psychotest/app.py"</cite>,
+                        line <em class="line">19</em>,
+                        in <code class="function">create_tables</code></h4>
+                    <div class="source">
+                        <pre class="line before"><span class="ws"></span>app.secret_key = 'rust4m'</pre>
+                        <pre class="line before"><span class="ws"></span> </pre>
+                        <pre class="line before"><span class="ws"></span> </pre>
+                        <pre class="line before"><span class="ws"></span>@app.before_first_request</pre>
+                        <pre class="line before"><span class="ws"></span>def create_tables():</pre>
+                        <pre class="line current"><span class="ws">    </span>db.create_all()</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span class="ws"></span># CRUD</pre>
+                        <pre class="line after"><span class="ws"></span>api.add_resource(CRUDTest, '/CRUD/tests/&lt;string:name&gt;')</pre>
+                        <pre class="line after"><span class="ws"></span>api.add_resource(CRUDquestions, '/CRUD/questions/&lt;int:test_id&gt;')</pre>
+                    </div>
+                </div>
+
+            <li>
+                <div class="frame" id="frame-140329983667056">
+                    <h4>File <cite class="filename">"/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask_sqlalchemy/__init__.py"</cite>,
+                        line <em class="line">963</em>,
+                        in <code class="function">create_all</code></h4>
+                    <div class="source">
+                        <pre class="line before"><span
+                                class="ws">        </span>&quot;&quot;&quot;Creates all tables.</pre>
+                        <pre class="line before"><span class="ws"></span> </pre>
+                        <pre class="line before"><span class="ws">        </span>.. versionchanged:: 0.12</pre>
+                        <pre class="line before"><span class="ws">           </span>Parameters were added</pre>
+                        <pre class="line before"><span class="ws">        </span>&quot;&quot;&quot;</pre>
+                        <pre class="line current"><span class="ws">        </span>self._execute_for_all_tables(app, bind, 'create_all')</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span class="ws">    </span>def drop_all(self, bind='__all__', app=None):</pre>
+                        <pre class="line after"><span
+                                class="ws">        </span>&quot;&quot;&quot;Drops all tables.</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span class="ws">        </span>.. versionchanged:: 0.12</pre>
+                    </div>
+                </div>
+
+            <li>
+                <div class="frame" id="frame-140329983667280">
+                    <h4>File <cite class="filename">"/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask_sqlalchemy/__init__.py"</cite>,
+                        line <em class="line">955</em>,
+                        in <code class="function">_execute_for_all_tables</code></h4>
+                    <div class="source">
+                        <pre class="line before"><span class="ws">            </span>extra = {}</pre>
+                        <pre class="line before"><span class="ws">            </span>if not skip_tables:</pre>
+                        <pre class="line before"><span class="ws">                </span>tables = self.get_tables_for_bind(bind)</pre>
+                        <pre class="line before"><span class="ws">                </span>extra['tables'] = tables</pre>
+                        <pre class="line before"><span class="ws">            </span>op = getattr(self.Model.metadata, operation)</pre>
+                        <pre class="line current"><span class="ws">            </span>op(bind=self.get_engine(app, bind), **extra)</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span class="ws">    </span>def create_all(self, bind='__all__', app=None):</pre>
+                        <pre class="line after"><span
+                                class="ws">        </span>&quot;&quot;&quot;Creates all tables.</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span class="ws">        </span>.. versionchanged:: 0.12</pre>
+                    </div>
+                </div>
+
+            <li>
+                <div class="frame" id="frame-140329983667392">
+                    <h4>File <cite class="filename">"/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/sql/schema.py"</cite>,
+                        line <em class="line">4004</em>,
+                        in <code class="function">create_all</code></h4>
+                    <div class="source">
+                        <pre class="line before"><span class="ws">        </span>if bind is None:</pre>
+                        <pre class="line before"><span class="ws">            </span>bind = _bind_or_error(self)</pre>
+                        <pre class="line before"><span class="ws">        </span>bind._run_visitor(ddl.SchemaGenerator,</pre>
+                        <pre class="line before"><span class="ws">                          </span>self,</pre>
+                        <pre class="line before"><span class="ws">                          </span>checkfirst=checkfirst,</pre>
+                        <pre class="line current"><span class="ws">                          </span>tables=tables)</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span class="ws">    </span>def drop_all(self, bind=None, tables=None, checkfirst=True):</pre>
+                        <pre class="line after"><span class="ws">        </span>&quot;&quot;&quot;Drop all tables stored in this metadata.</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span class="ws">        </span>Conditional by default, will not attempt to drop tables not present in</pre>
+                    </div>
+                </div>
+
+            <li>
+                <div class="frame" id="frame-140329983667616">
+                    <h4>File <cite class="filename">"/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/engine/base.py"</cite>,
+                        line <em class="line">1939</em>,
+                        in <code class="function">_run_visitor</code></h4>
+                    <div class="source">
+                        <pre class="line before"><span class="ws">        </span>else:</pre>
+                        <pre class="line before"><span class="ws">            </span>yield connection</pre>
+                        <pre class="line before"><span class="ws"></span> </pre>
+                        <pre class="line before"><span class="ws">    </span>def _run_visitor(self, visitorcallable, element,</pre>
+                        <pre class="line before"><span class="ws">                     </span>connection=None, **kwargs):</pre>
+                        <pre class="line current"><span class="ws">        </span>with self._optional_conn_ctx_manager(connection) as conn:</pre>
+                        <pre class="line after"><span class="ws">            </span>conn._run_visitor(visitorcallable, element, **kwargs)</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span class="ws">    </span>class _trans_ctx(object):</pre>
+                        <pre class="line after"><span class="ws">        </span>def __init__(self, conn, transaction, close_with_result):</pre>
+                        <pre class="line after"><span class="ws">            </span>self.conn = conn</pre>
+                    </div>
+                </div>
+
+            <li>
+                <div class="frame" id="frame-140329983667840">
+                    <h4>File <cite class="filename">"/usr/lib/python3.5/contextlib.py"</cite>,
+                        line <em class="line">59</em>,
+                        in <code class="function">__enter__</code></h4>
+                    <div class="source">
+                        <pre class="line before"><span class="ws">        </span># called</pre>
+                        <pre class="line before"><span class="ws">        </span>return self.__class__(self.func, self.args, self.kwds)</pre>
+                        <pre class="line before"><span class="ws"></span> </pre>
+                        <pre class="line before"><span class="ws">    </span>def __enter__(self):</pre>
+                        <pre class="line before"><span class="ws">        </span>try:</pre>
+                        <pre class="line current"><span class="ws">            </span>return next(self.gen)</pre>
+                        <pre class="line after"><span class="ws">        </span>except StopIteration:</pre>
+                        <pre class="line after"><span class="ws">            </span>raise RuntimeError(&quot;generator didn't yield&quot;) from None</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span class="ws">    </span>def __exit__(self, type, value, traceback):</pre>
+                        <pre class="line after"><span class="ws">        </span>if type is None:</pre>
+                    </div>
+                </div>
+
+            <li>
+                <div class="frame" id="frame-140329983667672">
+                    <h4>File <cite class="filename">"/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/engine/base.py"</cite>,
+                        line <em class="line">1932</em>,
+                        in <code class="function">_optional_conn_ctx_manager</code></h4>
+                    <div class="source">
+                        <pre class="line before"><span class="ws">            </span>return conn._execute_default(default, (), {})</pre>
+                        <pre class="line before"><span class="ws"></span> </pre>
+                        <pre class="line before"><span class="ws">    </span>@contextlib.contextmanager</pre>
+                        <pre class="line before"><span class="ws">    </span>def _optional_conn_ctx_manager(self, connection=None):</pre>
+                        <pre class="line before"><span class="ws">        </span>if connection is None:</pre>
+                        <pre class="line current"><span class="ws">            </span>with self.contextual_connect() as conn:</pre>
+                        <pre class="line after"><span class="ws">                </span>yield conn</pre>
+                        <pre class="line after"><span class="ws">        </span>else:</pre>
+                        <pre class="line after"><span class="ws">            </span>yield connection</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span class="ws">    </span>def _run_visitor(self, visitorcallable, element,</pre>
+                    </div>
+                </div>
+
+            <li>
+                <div class="frame" id="frame-140329983667952">
+                    <h4>File <cite class="filename">"/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/engine/base.py"</cite>,
+                        line <em class="line">2123</em>,
+                        in <code class="function">contextual_connect</code></h4>
+                    <div class="source">
+                        <pre class="line before"><span class="ws"></span> </pre>
+                        <pre class="line before"><span class="ws">        </span>&quot;&quot;&quot;</pre>
+                        <pre class="line before"><span class="ws"></span> </pre>
+                        <pre class="line before"><span class="ws">        </span>return self._connection_cls(</pre>
+                        <pre class="line before"><span class="ws">            </span>self,</pre>
+                        <pre class="line current"><span class="ws">            </span>self._wrap_pool_connect(self.pool.connect, None),</pre>
+                        <pre class="line after"><span class="ws">            </span>close_with_result=close_with_result,</pre>
+                        <pre class="line after"><span class="ws">            </span>**kwargs)</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span class="ws">    </span>def table_names(self, schema=None, connection=None):</pre>
+                        <pre class="line after"><span class="ws">        </span>&quot;&quot;&quot;Return a list of all table names available in the database.</pre>
+                    </div>
+                </div>
+
+            <li>
+                <div class="frame" id="frame-140329983668008">
+                    <h4>File <cite class="filename">"/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/engine/base.py"</cite>,
+                        line <em class="line">2158</em>,
+                        in <code class="function">_wrap_pool_connect</code></h4>
+                    <div class="source">
+                        <pre class="line before"><span class="ws">        </span>return self.run_callable(self.dialect.has_table, table_name, schema)</pre>
+                        <pre class="line before"><span class="ws"></span> </pre>
+                        <pre class="line before"><span class="ws">    </span>def _wrap_pool_connect(self, fn, connection):</pre>
+                        <pre class="line before"><span class="ws">        </span>dialect = self.dialect</pre>
+                        <pre class="line before"><span class="ws">        </span>try:</pre>
+                        <pre class="line current"><span class="ws">            </span>return fn()</pre>
+                        <pre class="line after"><span class="ws">        </span>except dialect.dbapi.Error as e:</pre>
+                        <pre class="line after"><span class="ws">            </span>if connection is None:</pre>
+                        <pre class="line after"><span class="ws">                </span>Connection._handle_dbapi_exception_noconnection(</pre>
+                        <pre class="line after"><span class="ws">                    </span>e, dialect, self)</pre>
+                        <pre class="line after"><span class="ws">            </span>else:</pre>
+                    </div>
+                </div>
+
+            <li>
+                <div class="frame" id="frame-140329983668064">
+                    <h4>File <cite class="filename">"/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/pool.py"</cite>,
+                        line <em class="line">403</em>,
+                        in <code class="function">connect</code></h4>
+                    <div class="source">
+                        <pre class="line before"><span class="ws">        </span>``close()`` method is called, the connection will be returned to</pre>
+                        <pre class="line before"><span class="ws">        </span>the pool.</pre>
+                        <pre class="line before"><span class="ws"></span> </pre>
+                        <pre class="line before"><span class="ws">        </span>&quot;&quot;&quot;</pre>
+                        <pre class="line before"><span class="ws">        </span>if not self._use_threadlocal:</pre>
+                        <pre class="line current"><span class="ws">            </span>return _ConnectionFairy._checkout(self)</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span class="ws">        </span>try:</pre>
+                        <pre class="line after"><span
+                                class="ws">            </span>rec = self._threadconns.current()</pre>
+                        <pre class="line after"><span class="ws">        </span>except AttributeError:</pre>
+                        <pre class="line after"><span class="ws">            </span>pass</pre>
+                    </div>
+                </div>
+
+            <li>
+                <div class="frame" id="frame-140329983667896">
+                    <h4>File <cite class="filename">"/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/pool.py"</cite>,
+                        line <em class="line">788</em>,
+                        in <code class="function">_checkout</code></h4>
+                    <div class="source">
+                        <pre class="line before"><span class="ws">    </span>&quot;&quot;&quot;</pre>
+                        <pre class="line before"><span class="ws"></span> </pre>
+                        <pre class="line before"><span class="ws">    </span>@classmethod</pre>
+                        <pre class="line before"><span class="ws">    </span>def _checkout(cls, pool, threadconns=None, fairy=None):</pre>
+                        <pre class="line before"><span class="ws">        </span>if not fairy:</pre>
+                        <pre class="line current"><span class="ws">            </span>fairy = _ConnectionRecord.checkout(pool)</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span class="ws">            </span>fairy._pool = pool</pre>
+                        <pre class="line after"><span class="ws">            </span>fairy._counter = 0</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span class="ws">            </span>if threadconns is not None:</pre>
+                    </div>
+                </div>
+
+            <li>
+                <div class="frame" id="frame-140329983668120">
+                    <h4>File <cite class="filename">"/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/pool.py"</cite>,
+                        line <em class="line">532</em>,
+                        in <code class="function">checkout</code></h4>
+                    <div class="source">
+                        <pre class="line before"><span class="ws">        </span>&quot;&quot;&quot;</pre>
+                        <pre class="line before"><span class="ws">        </span>return {}</pre>
+                        <pre class="line before"><span class="ws"></span> </pre>
+                        <pre class="line before"><span class="ws">    </span>@classmethod</pre>
+                        <pre class="line before"><span class="ws">    </span>def checkout(cls, pool):</pre>
+                        <pre class="line current"><span class="ws">        </span>rec = pool._do_get()</pre>
+                        <pre class="line after"><span class="ws">        </span>try:</pre>
+                        <pre class="line after"><span class="ws">            </span>dbapi_connection = rec.get_connection()</pre>
+                        <pre class="line after"><span class="ws">        </span>except Exception as err:</pre>
+                        <pre class="line after"><span class="ws">            </span>with util.safe_reraise():</pre>
+                        <pre class="line after"><span class="ws">                </span>rec._checkin_failed(err)</pre>
+                    </div>
+                </div>
+
+            <li>
+                <div class="frame" id="frame-140329983668176">
+                    <h4>File <cite class="filename">"/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/pool.py"</cite>,
+                        line <em class="line">1284</em>,
+                        in <code class="function">_do_get</code></h4>
+                    <div class="source">
+                        <pre class="line before"><span class="ws"></span> </pre>
+                        <pre class="line before"><span class="ws">    </span>def _do_return_conn(self, conn):</pre>
+                        <pre class="line before"><span class="ws">        </span>conn.close()</pre>
+                        <pre class="line before"><span class="ws"></span> </pre>
+                        <pre class="line before"><span class="ws">    </span>def _do_get(self):</pre>
+                        <pre class="line current"><span class="ws">        </span>return self._create_connection()</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span class="ws">    </span>def recreate(self):</pre>
+                        <pre class="line after"><span class="ws">        </span>self.logger.info(&quot;Pool recreating&quot;)</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span
+                                class="ws">        </span>return self.__class__(self._creator,</pre>
+                    </div>
+                </div>
+
+            <li>
+                <div class="frame" id="frame-140329983667112">
+                    <h4>File <cite class="filename">"/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/pool.py"</cite>,
+                        line <em class="line">350</em>,
+                        in <code class="function">_create_connection</code></h4>
+                    <div class="source">
+                        <pre class="line before"><span class="ws">        </span>return _ConnectionFairy._checkout(self)</pre>
+                        <pre class="line before"><span class="ws"></span> </pre>
+                        <pre class="line before"><span class="ws">    </span>def _create_connection(self):</pre>
+                        <pre class="line before"><span class="ws">        </span>&quot;&quot;&quot;Called by subclasses to create a new ConnectionRecord.&quot;&quot;&quot;</pre>
+                        <pre class="line before"><span class="ws"></span> </pre>
+                        <pre class="line current"><span class="ws">        </span>return _ConnectionRecord(self)</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span class="ws">    </span>def _invalidate(self, connection, exception=None, _checkin=True):</pre>
+                        <pre class="line after"><span class="ws">        </span>&quot;&quot;&quot;Mark all connections established within the generation</pre>
+                        <pre class="line after"><span class="ws">        </span>of the given connection as invalidated.</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                    </div>
+                </div>
+
+            <li>
+                <div class="frame" id="frame-140329983667784">
+                    <h4>File <cite class="filename">"/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/pool.py"</cite>,
+                        line <em class="line">477</em>,
+                        in <code class="function">__init__</code></h4>
+                    <div class="source">
+                        <pre class="line before"><span class="ws">    </span>&quot;&quot;&quot;</pre>
+                        <pre class="line before"><span class="ws"></span> </pre>
+                        <pre class="line before"><span
+                                class="ws">    </span>def __init__(self, pool, connect=True):</pre>
+                        <pre class="line before"><span class="ws">        </span>self.__pool = pool</pre>
+                        <pre class="line before"><span class="ws">        </span>if connect:</pre>
+                        <pre class="line current"><span class="ws">            </span>self.__connect(first_connect_check=True)</pre>
+                        <pre class="line after"><span class="ws">        </span>self.finalize_callback = deque()</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span class="ws">    </span>fairy_ref = None</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span class="ws">    </span>starttime = None</pre>
+                    </div>
+                </div>
+
+            <li>
+                <div class="frame" id="frame-140329983667728">
+                    <h4>File <cite class="filename">"/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/pool.py"</cite>,
+                        line <em class="line">671</em>,
+                        in <code class="function">__connect</code></h4>
+                    <div class="source">
+                        <pre class="line before"><span class="ws">        </span># ensure any existing connection is removed, so that if</pre>
+                        <pre class="line before"><span class="ws">        </span># creator fails, this attribute stays None</pre>
+                        <pre class="line before"><span class="ws">        </span>self.connection = None</pre>
+                        <pre class="line before"><span class="ws">        </span>try:</pre>
+                        <pre class="line before"><span class="ws">            </span>self.starttime = time.time()</pre>
+                        <pre class="line current"><span class="ws">            </span>connection = pool._invoke_creator(self)</pre>
+                        <pre class="line after"><span class="ws">            </span>pool.logger.debug(&quot;Created new connection %r&quot;, connection)</pre>
+                        <pre class="line after"><span class="ws">            </span>self.connection = connection</pre>
+                        <pre class="line after"><span class="ws">        </span>except Exception as e:</pre>
+                        <pre class="line after"><span class="ws">            </span>pool.logger.debug(&quot;Error on connect(): %s&quot;, e)</pre>
+                        <pre class="line after"><span class="ws">            </span>raise</pre>
+                    </div>
+                </div>
+
+            <li>
+                <div class="frame" id="frame-140329983666944">
+                    <h4>File <cite class="filename">"/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/engine/strategies.py"</cite>,
+                        line <em class="line">106</em>,
+                        in <code class="function">connect</code></h4>
+                    <div class="source">
+                        <pre class="line before"><span class="ws">                    </span>for fn in dialect.dispatch.do_connect:</pre>
+                        <pre class="line before"><span class="ws">                        </span>connection = fn(</pre>
+                        <pre class="line before"><span class="ws">                            </span>dialect, connection_record, cargs, cparams)</pre>
+                        <pre class="line before"><span class="ws">                        </span>if connection is not None:</pre>
+                        <pre class="line before"><span
+                                class="ws">                            </span>return connection</pre>
+                        <pre class="line current"><span class="ws">                </span>return dialect.connect(*cargs, **cparams)</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span class="ws">            </span>creator = pop_kwarg('creator', connect)</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span class="ws">            </span>poolclass = pop_kwarg('poolclass', None)</pre>
+                        <pre class="line after"><span class="ws">            </span>if poolclass is None:</pre>
+                    </div>
+                </div>
+
+            <li>
+                <div class="frame" id="frame-140329983733888">
+                    <h4>File <cite class="filename">"/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/engine/default.py"</cite>,
+                        line <em class="line">410</em>,
+                        in <code class="function">connect</code></h4>
+                    <div class="source">
+                        <pre class="line before"><span class="ws">                </span>&quot;Identifier '%s' exceeds maximum length of %d characters&quot; %</pre>
+                        <pre class="line before"><span class="ws">                </span>(ident, self.max_identifier_length)</pre>
+                        <pre class="line before"><span class="ws">            </span>)</pre>
+                        <pre class="line before"><span class="ws"></span> </pre>
+                        <pre class="line before"><span class="ws">    </span>def connect(self, *cargs, **cparams):</pre>
+                        <pre class="line current"><span class="ws">        </span>return self.dbapi.connect(*cargs, **cparams)</pre>
+                        <pre class="line after"><span class="ws"></span> </pre>
+                        <pre class="line after"><span class="ws">    </span>def create_connect_args(self, url):</pre>
+                        <pre class="line after"><span
+                                class="ws">        </span>opts = url.translate_connect_args()</pre>
+                        <pre class="line after"><span class="ws">        </span>opts.update(url.query)</pre>
+                        <pre class="line after"><span class="ws">        </span>return [[], opts]</pre>
+                    </div>
+                </div>
+        </ul>
+        <blockquote>TypeError: 'charset' is an invalid keyword argument for this function</blockquote>
+    </div>
+
+    <div class="plain">
+        <form action="/?__debugger__=yes&amp;cmd=paste" method="post">
+            <p>
+                <input type="hidden" name="language" value="pytb">
+                This is the Copy/Paste friendly version of the traceback. <span
+                    class="pastemessage">You can also paste this traceback into
+      a <a href="https://gist.github.com/">gist</a>:
+      <input type="submit" value="create paste"></span>
+            </p>
+            <textarea cols="50" rows="10" name="code" readonly>Traceback (most recent call last):
+  File &quot;/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask/app.py&quot;, line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File &quot;/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask/app.py&quot;, line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File &quot;/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask_restful/__init__.py&quot;, line 273, in error_router
+    return original_handler(e)
+  File &quot;/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask/app.py&quot;, line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File &quot;/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask/_compat.py&quot;, line 34, in reraise
+    raise value.with_traceback(tb)
+  File &quot;/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask/app.py&quot;, line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File &quot;/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask/app.py&quot;, line 1808, in full_dispatch_request
+    self.try_trigger_before_first_request_functions()
+  File &quot;/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask/app.py&quot;, line 1855, in try_trigger_before_first_request_functions
+    func()
+  File &quot;/home/aydar/PycharmProjects/psychotest/app.py&quot;, line 19, in create_tables
+    db.create_all()
+  File &quot;/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask_sqlalchemy/__init__.py&quot;, line 963, in create_all
+    self._execute_for_all_tables(app, bind, 'create_all')
+  File &quot;/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask_sqlalchemy/__init__.py&quot;, line 955, in _execute_for_all_tables
+    op(bind=self.get_engine(app, bind), **extra)
+  File &quot;/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/sql/schema.py&quot;, line 4004, in create_all
+    tables=tables)
+  File &quot;/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/engine/base.py&quot;, line 1939, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File &quot;/usr/lib/python3.5/contextlib.py&quot;, line 59, in __enter__
+    return next(self.gen)
+  File &quot;/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/engine/base.py&quot;, line 1932, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File &quot;/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/engine/base.py&quot;, line 2123, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File &quot;/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/engine/base.py&quot;, line 2158, in _wrap_pool_connect
+    return fn()
+  File &quot;/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/pool.py&quot;, line 403, in connect
+    return _ConnectionFairy._checkout(self)
+  File &quot;/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/pool.py&quot;, line 788, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File &quot;/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/pool.py&quot;, line 532, in checkout
+    rec = pool._do_get()
+  File &quot;/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/pool.py&quot;, line 1284, in _do_get
+    return self._create_connection()
+  File &quot;/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/pool.py&quot;, line 350, in _create_connection
+    return _ConnectionRecord(self)
+  File &quot;/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/pool.py&quot;, line 477, in __init__
+    self.__connect(first_connect_check=True)
+  File &quot;/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/pool.py&quot;, line 671, in __connect
+    connection = pool._invoke_creator(self)
+  File &quot;/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/engine/strategies.py&quot;, line 106, in connect
+    return dialect.connect(*cargs, **cparams)
+  File &quot;/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/engine/default.py&quot;, line 410, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+TypeError: 'charset' is an invalid keyword argument for this function</textarea>
+        </form>
+    </div>
+    <div class="explanation">
+        The debugger caught an exception in your WSGI application. You can now
+        look at the traceback which led to the error. <span class="nojavascript">
+  If you enable JavaScript you can also use additional features such as code
+  execution (if the evalex feature is enabled), automatic pasting of the
+  exceptions and much more.</span>
+    </div>
+    <div class="footer">
+        Brought to you by <strong class="arthur">DON'T PANIC</strong>, your
+        friendly Werkzeug powered traceback interpreter.
+    </div>
+</div>
+
+<div class="pin-prompt">
+    <div class="inner">
+        <h3>Console Locked</h3>
+        <p>
+            The console is locked and needs to be unlocked by entering the PIN.
+            You can find the PIN printed out on the standard output of your
+            shell that runs the server.
+            <form>
+        <p>PIN:
+            <input type=text name=pin size=14>
+            <input type=submit name=btn value="Confirm Pin">
+            </form>
+    </div>
+</div>
+</body>
+</html>
+
+<!--
+
+Traceback (most recent call last):
+  File "/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask_restful/__init__.py", line 273, in error_router
+    return original_handler(e)
+  File "/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask/_compat.py", line 34, in reraise
+    raise value.with_traceback(tb)
+  File "/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask/app.py", line 1808, in full_dispatch_request
+    self.try_trigger_before_first_request_functions()
+  File "/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask/app.py", line 1855, in try_trigger_before_first_request_functions
+    func()
+  File "/home/aydar/PycharmProjects/psychotest/app.py", line 19, in create_tables
+    db.create_all()
+  File "/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask_sqlalchemy/__init__.py", line 963, in create_all
+    self._execute_for_all_tables(app, bind, 'create_all')
+  File "/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/flask_sqlalchemy/__init__.py", line 955, in _execute_for_all_tables
+    op(bind=self.get_engine(app, bind), **extra)
+  File "/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/sql/schema.py", line 4004, in create_all
+    tables=tables)
+  File "/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1939, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python3.5/contextlib.py", line 59, in __enter__
+    return next(self.gen)
+  File "/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1932, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 2123, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 2158, in _wrap_pool_connect
+    return fn()
+  File "/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/pool.py", line 403, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/pool.py", line 788, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/pool.py", line 532, in checkout
+    rec = pool._do_get()
+  File "/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/pool.py", line 1284, in _do_get
+    return self._create_connection()
+  File "/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/pool.py", line 350, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/pool.py", line 477, in __init__
+    self.__connect(first_connect_check=True)
+  File "/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/pool.py", line 671, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/engine/strategies.py", line 106, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/aydar/PycharmProjects/psychotest/venv/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 410, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+TypeError: 'charset' is an invalid keyword argument for this function
+
+-->

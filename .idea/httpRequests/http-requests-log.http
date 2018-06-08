@@ -1,0 +1,432 @@
+POST http://localhost:5000/CRUD/tests/test_test
+Accept: application/json
+Cache-Control: no-cache
+
+<> 2018-06-07T110614.400.json
+
+###
+
+GET http://localhost:5000/tests/1
+Accept: application/json
+
+<> 2018-06-07T100400.200.json
+
+###
+
+POST http://localhost:5000/CRUD/questions/1
+Content-Type: application/json
+
+{ "questions" :
+  {
+  "question1" : ["привет", "салам"],
+  "question2" : ["привет. как дела?", "салам. иштерин кандай?"]
+  }
+}
+
+<> 2018-06-07T100349.200.json
+
+###
+
+POST http://localhost:5000/CRUD/tests/test_test
+Accept: application/json
+Cache-Control: no-cache
+
+<> 2018-06-07T100341.201.json
+
+###
+
+GET http://localhost:5000/CRUD/questions/1
+Accept: application/json
+
+<> 2018-06-07T100248.405.json
+
+###
+
+POST http://localhost:5000/CRUD/tests/test_test
+Accept: application/json
+Cache-Control: no-cache
+
+<> 2018-06-07T100238.201.json
+
+###
+
+POST http://localhost:5000/CRUD/questions/1
+Content-Type: application/json
+
+{ "questions" :
+  {
+  "question1" : ["привет", "салам"],
+  "question2" : ["привет. как дела?", "салам. иштерин кандай?"]
+  }
+}
+
+<> 2018-06-07T100223.200.json
+
+###
+
+GET http://localhost:5000/CRUD/questions/1
+Accept: application/json
+
+###
+
+POST http://localhost:5000/tests/results
+Content-Type: application/json
+
+{"characteristics": {
+   "extraversion" : 1,
+   "neuroticism"  : 2,
+   "openness" : 3,
+   "consciousness" : 4,
+   "friendly" : 5
+   }
+}
+
+<> 2018-06-07T084115.200.json
+
+###
+
+POST http://localhost:5000/tests/results
+Content-Type: application/json
+
+{"characteristics": {
+   "extraversion" : 1,
+   "neuroticism"  : 2,
+   "openness" : 3,
+   "consciousness" : 4,
+   "friendly" : 5
+   }
+}
+
+<> 2018-06-07T083836.500.html
+
+###
+
+POST http://localhost:5000/tests/results
+Content-Type: application/json
+
+{"characteristics": {
+   "extraversion" : 1,
+   "neuroticism"  : 2,
+   "openness" : 3,
+   "consciousness" : 4,
+   "friendly" : 5
+   }
+}
+
+<> 2018-06-07T083708.500.html
+
+###
+
+POST http://localhost:5000/tests/results
+Content-Type: application/json
+
+{"characteristics": {
+   "extraversion" : 1
+   "neuroticism"  : 2
+   "openness" : 3
+   "consciousness" : 4
+   "friendly" : 5
+   }
+}
+
+<> 2018-06-07T083652.400.json
+
+###
+
+POST http://localhost:5000/tests/results
+Content-Type: application/json
+
+{"characteristics": {
+   "extraversion" = 1
+   "neuroticism"  = 2
+   "openness" = 3
+   "consciousness" = 4
+   "friendly" = 5
+   }
+}
+
+<> 2018-06-07T083632.400.json
+
+###
+
+GET http://localhost:5000/CRUD/questions/1
+Accept: application/json
+
+<> 2018-06-07T074056.500.html
+
+###
+
+GET http://localhost:5000/CRUD/questions/1
+Accept: application/json
+
+<> 2018-06-07T074004.500.html
+
+###
+
+GET http://localhost:5000/CRUD/questions/1
+Accept: application/json
+
+<> 2018-06-07T073914.500.html
+
+###
+
+GET http://localhost:5000/CRUD/questions/1
+Accept: application/json
+
+<> 2018-06-07T073450.500.html
+
+###
+
+GET http://localhost:5000/CRUD/questions/1
+Accept: application/json
+
+<> 2018-06-07T073337.500.html
+
+###
+
+GET http://localhost:5000/CRUD/questions/1
+Accept: application/json
+
+<> 2018-06-07T073248.500.html
+
+###
+
+GET http://localhost:5000/CRUD/questions/1
+Accept: application/json
+
+<> 2018-06-07T073157.500.html
+
+###
+
+GET http://localhost:5000/CRUD/questions/1
+Accept: application/json
+
+<> 2018-06-07T073133.500.html
+
+###
+
+GET http://localhost:5000/CRUD/questions/1
+Accept: application/json
+
+<> 2018-06-07T073050.500.html
+
+###
+
+GET http://localhost:5000/tests/1
+Accept: application/json
+
+<> 2018-06-07T070436.200.json
+
+###
+
+GET http://localhost:5000/tests/1
+Accept: application/json
+
+<> 2018-06-07T070344.500.html
+
+###
+
+GET http://localhost:5000/tests/1
+Accept: application/json
+
+<> 2018-06-07T070325.500.html
+
+###
+
+GET http://localhost:5000/tests/1
+Accept: application/json
+
+<> 2018-06-07T065102.200.json
+
+###
+
+POST http://localhost:5000/CRUD/questions/1
+Content-Type: application/json
+
+{ "questions" :
+  {
+  "question1" : ["привет", "салам"],
+  "question2" : ["привет. как дела?", "салам. иштерин кандай?"]
+  }
+}
+
+<> 2018-06-07T065055.200.json
+
+###
+
+POST http://localhost:5000/CRUD/tests/test_test
+Accept: application/json
+Cache-Control: no-cache
+
+<> 2018-06-07T065047.201.json
+
+###
+
+POST http://localhost:5000/CRUD/tests/test_test
+Accept: application/json
+Cache-Control: no-cache
+
+<> 2018-06-07T064928.500.html
+
+###
+
+GET http://localhost:5000/tests/1
+Accept: application/json
+
+<> 2018-06-07T064706.200.json
+
+###
+
+POST http://localhost:5000/CRUD/questions/1
+Content-Type: application/json
+
+{ "questions" :
+  {
+  "question1" : ["привет", "салам"],
+  "question2" : ["привет. как дела?", "салам. иштерин кандай?"]
+  }
+}
+
+<> 2018-06-07T064702.200.json
+
+###
+
+POST http://localhost:5000/CRUD/tests/test_test
+Accept: application/json
+Cache-Control: no-cache
+
+<> 2018-06-07T064659.201.json
+
+###
+
+GET http://localhost:5000/tests/1
+Accept: application/json
+
+<> 2018-06-07T064129.200.json
+
+###
+
+GET http://localhost:5000/tests/1
+Accept: application/json
+
+<> 2018-06-07T064110.500.html
+
+###
+
+POST http://localhost:5000/CRUD/questions/1
+Content-Type: application/json
+
+{ "questions" :
+  {
+  "question1" : ["привет", "салам"],
+  "question2" : ["привет. как дела?", "салам. иштерин кандай?"]
+  }
+}
+
+<> 2018-06-07T064104.200.json
+
+###
+
+GET http://localhost:5000/tests/1
+Accept: application/json
+
+<> 2018-06-07T063604.500.html
+
+###
+
+GET http://localhost:5000/tests/1
+Accept: application/json
+
+<> 2018-06-07T063416.500.html
+
+###
+
+GET http://localhost:5000/tests/1
+Accept: application/json
+
+<> 2018-06-07T063345.200.json
+
+###
+
+GET http://localhost:5000/tests/1
+Accept: application/json
+
+<> 2018-06-07T063329.200.json
+
+###
+
+GET http://localhost:5000/tests/1
+Accept: application/json
+
+<> 2018-06-07T063252.200.json
+
+###
+
+GET http://localhost:5000/tests/1
+Accept: application/json
+
+<> 2018-06-07T063234.500.html
+
+###
+
+GET http://localhost:5000/tests/1
+Accept: application/json
+
+###
+
+GET http://localhost:5000/tests/1
+Accept: application/json
+
+<> 2018-06-07T063038.500.html
+
+###
+
+GET http://localhost:5000/tests/1
+Accept: application/json
+
+<> 2018-06-07T063021.500.html
+
+###
+
+GET http://localhost:5000/tests/1
+Accept: application/json
+
+<> 2018-06-07T061600.200.json
+
+###
+
+GET http://localhost:5000/tests/1
+Accept: application/json
+
+<> 2018-06-07T061525.500.html
+
+###
+
+GET http://localhost:5000/tests/1
+Accept: application/json
+
+<> 2018-06-07T061334.500.html
+
+###
+
+GET http://localhost:5000/tests/1
+Accept: application/json
+
+<> 2018-06-07T061207.200.json
+
+###
+
+GET http://localhost:5000/tests/1
+Accept: application/json
+
+<> 2018-06-07T061152.500.html
+
+###
+
+GET http://localhost:5000/tests/1
+Accept: application/json
+
+<> 2018-06-07T060850.500.html
+
+###
+
