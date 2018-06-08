@@ -1,14 +1,21 @@
-<form class="container-fluid item-container new-page" onsubmit="onSubmit()">
+<form class="container-fluid item-container new-page" #authForm="ngForm" (ngSubmit)="onSubmit()">
   <h1>Информация о респонденте</h1>
 
   <div class="form-group">
-    <label for="dob">Год рождения</label>
-    <input class="form-control" id="dob" name="dob" type="date">
+    <label for="dob">Год рождения <b>*</b></label>
+    <input
+      class="form-control"
+      id="dob"
+      name="dob"
+      type="date"
+      required
+      [(ngModel)]="dob"
+    >
   </div>
 
   <div class="form-group">
-    <label for="gender">Пол</label>
-    <select class="form-control" name="gender" id="gender">
+    <label for="gender">Пол  <b>*</b></label>
+    <select class="form-control" name="gender" id="gender" required [(ngModel)]="gender">
       <option value="male">Мужчина</option>
       <option value="female">Женщина</option>
       <option value="no-answer">Предпочту не отвечать</option>
@@ -16,13 +23,13 @@
   </div>
 
   <div class="form-group">
-    <label for="country">Гражданство</label>
-    <input class="form-control" id="country" name="country" type="text" value="Кыргызская Республика">
+    <label for="country">Гражданство <b>*</b></label>
+    <input class="form-control" id="country" name="country" type="text" value="Кыргызская Республика"  required [(ngModel)]="country">
   </div>
 
   <div class="form-group">
     <label for="nationality">Национальность</label>
-    <select class="form-control" name="nationality" id="nationality">
+    <select class="form-control" name="nationality" id="nationality" [(ngModel)]="nationality">
       <option value="kg">Мужчина</option>
       <option value="ru">Женщина</option>
       <option value="another">Другое</option>
@@ -31,8 +38,8 @@
   </div>
 
   <div class="form-group">
-    <label for="education">Образование</label>
-    <select class="form-control" name="education" id="education">
+    <label for="education">Образование <b>*</b></label>
+    <select class="form-control" name="education" id="education" required [(ngModel)]="education">
       <option value="no">Нет формального образования</option>
       <option value="initial">Начальное</option>
       <option value="average">Среднее</option>
@@ -46,7 +53,7 @@
 
   <div class="form-group">
     <label for="family">Семейный статус</label>
-    <select class="form-control" name="family" id="family">
+    <select class="form-control" name="family" id="family" [(ngModel)]="family">
       <option value="have">Женат/Замужем</option>
       <option value="no">Холост/ Не замужем</option>
       <option value="another">Другое</option>
@@ -55,7 +62,7 @@
 
   <div class="form-group">
     <label for="work">Занятость</label>
-    <select class="form-control" name="work" id="work">
+    <select class="form-control" name="work" id="work" [(ngModel)]="work">
       <option value="have">Трудоустроен</option>
       <option value="business">Частный предприниматель</option>
       <option value="no">Не работаю</option>
@@ -66,8 +73,8 @@
   </div>
 
   <div class="form-group">
-    <label for="city">Область/город проживания</label>
-    <select class="form-control" name="city" id="city">
+    <label for="city">Область/город проживания <b>*</b></label>
+    <select class="form-control" name="city" id="city" required [(ngModel)]="city">
       <option value="bishkek">г. Бишкек</option>
       <option value="batken">Баткен</option>
       <option value="djalal-abad">Джалал-Абад</option>
@@ -81,15 +88,23 @@
 
   <div class="form-group">
     <label for="email">Ваш email (Результаты опросника будут отправлены в том числе на вашу почту)*</label>
-    <input class="form-control" id="email" name="email" type="email">
+    <input class="form-control" id="email" name="email" type="email" required [(ngModel)]="email">
   </div>
 
   <div class="form-group checkbox">
     <label for="sendEmail">Отправить результаты исследования по почте</label>
-    <input class="form-control" id="sendEmail" name="sendEmail" type="checkbox">
+    <input class="form-control" id="sendEmail" name="sendEmail" type="checkbox" [(ngModel)]="sendEmail">
   </div>
 
+  <p>*Обязательные поля </p>
+
   <div class="form-group row justify-content-end">
-    <button (click)="onSubmit()" class="form-button form-button--submit" type="submit">Отправить</button>
+    <button
+      class="form-button form-button--submit"
+      type="submit"
+      [disabled]="authForm.invalid"
+    >
+      Отправить
+    </button>
   </div>
 </form>
