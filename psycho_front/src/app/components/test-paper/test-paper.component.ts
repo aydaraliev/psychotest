@@ -66,6 +66,14 @@ export class TestPaperComponent implements OnInit, DoCheck {
       this.currentQuestion += 1;
     } else {
       this.questions[this.currentQuestion].value = value;
+      const sendingObject = {
+        extraversion: this.extraversion,
+        neuroticism: this.neuroticism,
+        openness: this.openness,
+        consciousness: this.consciousness,
+        friendly: this.friendly
+      };
+      console.log(sendingObject);
       this.router.navigate(['/feedback']);
     }
   }
