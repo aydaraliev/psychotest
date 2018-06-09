@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import {QuestionsResponse} from '../classes/questionsResponse';
+import { Response} from "../classes/response";
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -37,7 +38,7 @@ export class LanguageService {
     return localStorage.setItem('results', JSON.stringify(object));
   };
 
-  sendUser (object: any): Observable<Object> {
+  sendUser (object: any): Observable<Response> {
     const url = `${this.apiUrl}/tests/results`;
     const sendingObject = {
       user: object,
@@ -45,6 +46,6 @@ export class LanguageService {
     };
     // console.log(sendingObject)
     localStorage.removeItem('results')
-    return this.http.post<Object>(url, sendingObject, httpOptions);
+    return this.http.post<Response>(url, sendingObject, httpOptions);
   }
 }
