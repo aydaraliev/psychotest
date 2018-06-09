@@ -1,4 +1,4 @@
-import { Component, DoCheck } from '@angular/core';
+import { Component, DoCheck, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 // import { Info} from '../../classes/info';
 
@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './test-results.component.html',
   styleUrls: ['./test-results.component.css']
 })
-export class TestResultsComponent implements DoCheck {
+export class TestResultsComponent implements DoCheck, OnInit {
   lang: number;
   // thanks = ['Спасибо!', 'Рахмат!'];
   // questionLabel = ['Отражающий вопрос:', 'Ойлуу суроо:'];
@@ -18,10 +18,15 @@ export class TestResultsComponent implements DoCheck {
   //   // text: ['Поделиться через фейсбук', 'Фейсбукта бөлүшүү'],
   //   // text: ['Поделиться на Twitter', 'Twitter бөлүшүү'],
   // ];
-  info = JSON.parse(localStorage.getItem('textResults'));
+  info = [];
   constructor(
     private router: Router
   ) { }
+
+  ngOnInit() {
+    this.info = JSON.parse(localStorage.getItem('text-results'));
+    localStorage.removeItem('text-results');
+  }
 
   ngDoCheck() {
     this.lang = Number(localStorage.lang);

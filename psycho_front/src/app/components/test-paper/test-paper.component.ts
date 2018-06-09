@@ -75,10 +75,6 @@ export class TestPaperComponent implements OnInit, DoCheck {
 
       this.langService.saveResults(sendingObject);
 
-      this.langService.getResultsText(sendingObject).subscribe(response => {
-        this.langService.saveResultsText(response)
-      });
-
       this.router.navigate(['/feedback']);
     }
   }

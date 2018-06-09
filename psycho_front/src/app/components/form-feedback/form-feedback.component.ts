@@ -51,7 +51,13 @@ export class FormFeedbackComponent implements DoCheck {
       email: this.email,
       sendEmail: this.sendEmail
     };
-    this.langService.sendUser(sendingObject).subscribe();
+    this.langService.sendUser(sendingObject)
+      .subscribe(
+        response => {
+          localStorage.setItem('text-results', JSON.stringify(response));
+        },
+        error => console.log(error)
+      );
     this.router.navigate(['/results']);
   }
 }

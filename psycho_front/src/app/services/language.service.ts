@@ -37,15 +37,8 @@ export class LanguageService {
     return localStorage.setItem('results', JSON.stringify(object));
   };
 
-  getResultsText (object: any): Observable<Object> {
-    const url = `${this.apiUrl}/tests/results`;
-    // console.log(object)
-
-    return this.http.get<Object>(url, object);
-  }
-
   sendUser (object: any): Observable<Object> {
-    const url = `${this.apiUrl}/user`;
+    const url = `${this.apiUrl}/tests/results`;
     const sendingObject = {
       user: object,
       results: JSON.parse(localStorage.getItem('results'))
@@ -53,9 +46,5 @@ export class LanguageService {
     // console.log(sendingObject)
     localStorage.removeItem('results')
     return this.http.post<Object>(url, sendingObject, httpOptions);
-  }
-
-  saveResultsText (object: any) {
-    return localStorage.setItem('textResults', JSON.stringify(object));
   }
 }
