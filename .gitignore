@@ -40,5 +40,5 @@ psycho_frontThumbs.db
 .idea/*
 
 # Python
-*__pycache__**
+*__pycache__*
 *.pyc

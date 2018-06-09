@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94a39719-1298-4ff6-8203-70b05b954b5d" name="Default" comment="">
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/psycho_front/src/app/components/test-results/test-results.component.css" afterPath="$PROJECT_DIR$/psycho_front/src/app/components/test-results/test-results.component.css" />
-      <change beforePath="$PROJECT_DIR$/psycho_front/src/app/components/test-results/test-results.component.html" afterPath="$PROJECT_DIR$/psycho_front/src/app/components/test-results/test-results.component.html" />
-      <change beforePath="$PROJECT_DIR$/psycho_front/src/app/components/test-results/test-results.component.ts" afterPath="$PROJECT_DIR$/psycho_front/src/app/components/test-results/test-results.component.ts" />
-=======
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-06-07T065047.201.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-06-07T065055.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/users.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/psycho_front/src/app/components/form-feedback/form-feedback.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/psycho_front/src/app/components/form-feedback/form-feedback.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/psycho_front/src/app/components/test-results/test-results.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/psycho_front/src/app/components/test-results/test-results.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/psycho_front/src/app/components/test-results/test-results.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/psycho_front/src/app/components/test-results/test-results.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/user.py" afterDir="false" />
->>>>>>> 597e0b34f18cfb22ebddffa19cd79b1c83e38bdf
+      <change beforePath="$PROJECT_DIR$/psycho_front/src/app/services/.language.service.ts.swp" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,42 +36,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-<<<<<<< HEAD
-      <file leaf-file-name="test-results.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/psycho_front/src/app/components/test-results/test-results.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#59#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test-results.component.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/psycho_front/src/app/components/test-results/test-results.component.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test-results.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/psycho_front/src/app/components/test-results/test-results.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-=======
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
->>>>>>> 597e0b34f18cfb22ebddffa19cd79b1c83e38bdf
+            <state relative-caret-position="783">
+              <caret line="42" column="13" lean-forward="true" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -147,16 +102,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/create_test.http" />
         <option value="$PROJECT_DIR$/models/questions.py" />
         <option value="$PROJECT_DIR$/models/interpretation.py" />
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/models/users.py" />
-        <option value="$PROJECT_DIR$/resources/user.py" />
-        <option value="$PROJECT_DIR$/psycho_front/src/app/services/language.service.ts" />
-        <option value="$PROJECT_DIR$/psycho_front/src/app/components/test-paper/test-paper.component.ts" />
-        <option value="$PROJECT_DIR$/psycho_front/src/app/components/form-feedback/form-feedback.component.ts" />
-        <option value="$PROJECT_DIR$/psycho_front/src/app/components/test-results/test-results.component.html" />
-        <option value="$PROJECT_DIR$/psycho_front/src/app/components/test-results/test-results.component.ts" />
-        <option value="$PROJECT_DIR$/psycho_front/src/app/components/test-results/test-results.component.css" />
-=======
         <option value="$PROJECT_DIR$/psycho_front/src/app/services/language.service.ts" />
         <option value="$PROJECT_DIR$/psycho_front/src/app/components/test-paper/test-paper.component.ts" />
         <option value="$PROJECT_DIR$/psycho_front/src/app/components/form-feedback/form-feedback.component.ts" />
@@ -166,7 +111,6 @@
         <option value="$PROJECT_DIR$/psycho_front/src/app/components/test-results/test-results.component.html" />
         <option value="$PROJECT_DIR$/psycho_front/src/app/components/test-results/test-results.component.ts" />
         <option value="$PROJECT_DIR$/.gitignore" />
->>>>>>> 597e0b34f18cfb22ebddffa19cd79b1c83e38bdf
       </list>
     </option>
   </component>
@@ -784,7 +728,7 @@
       <workItem from="1528505682216" duration="458000" />
       <workItem from="1528506154172" duration="1312000" />
       <workItem from="1528580005743" duration="719000" />
-      <workItem from="1528580736504" duration="1854000" />
+      <workItem from="1528580736504" duration="569000" />
     </task>
     <task id="LOCAL-00001" summary="removed front git">
       <created>1528438920746</created>
@@ -804,41 +748,9 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4585000" />
+    <option name="totallyTimeSpent" value="3300000" />
   </component>
   <component name="ToolWindowManager">
-<<<<<<< HEAD
-    <frame x="130" y="-8" width="1368" height="780" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956812" sideWeight="0.49966466" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27525622" sideWeight="0.76814735" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956812" sideWeight="0.50033534" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956812" sideWeight="0.49966466" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2753186" sideWeight="0.23185265" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38671097" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66976744" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2568746" sideWeight="0.5009901" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32964453" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.407432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956812" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297943" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297943" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297943" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
-=======
     <frame x="130" y="-8" width="3070" height="1808" extended-state="6" />
     <editor active="true" />
     <layout>
@@ -849,9 +761,9 @@
       <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.49966466" weight="0.32956812" />
       <window_info anchor="bottom" id="Python Console" order="15" weight="0.32956812" />
       <window_info id="npm" order="0" sideWeight="0.23185265" side_tool="true" weight="0.2753186" />
-      <window_info anchor="bottom" id="Terminal" order="13" visible="true" weight="0.3229236" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="13" visible="true" weight="0.3229236" />
       <window_info anchor="bottom" id="TypeScript" order="0" sideWeight="0.49966466" weight="0.32956812" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.76814735" visible="true" weight="0.27900738" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.76814735" visible="true" weight="0.27900738" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" weight="0.32964453" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -869,7 +781,6 @@
       <window_info anchor="bottom" id="Database Console" order="16" weight="0.3297943" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.3297943" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="17" weight="0.3297943" />
->>>>>>> 597e0b34f18cfb22ebddffa19cd79b1c83e38bdf
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -914,14 +825,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="1" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-<<<<<<< HEAD
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/write_user_results.http" />
-=======
->>>>>>> 597e0b34f18cfb22ebddffa19cd79b1c83e38bdf
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="638">
@@ -1136,9 +1043,6 @@
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/resources/user.py">
-=======
     <entry file="file://$PROJECT_DIR$/psycho_front/src/app/components/test-results/test-results.component.spec.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1153,16 +1057,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/psycho_front/package.json">
->>>>>>> 597e0b34f18cfb22ebddffa19cd79b1c83e38bdf
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="638">
           <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/psycho_front/src/app/components/test-results/test-results.component.spec.ts">
-=======
     <entry file="file://$PROJECT_DIR$/models/users.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
@@ -1174,7 +1074,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
->>>>>>> 597e0b34f18cfb22ebddffa19cd79b1c83e38bdf
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
           <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
@@ -1191,25 +1090,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/psycho_front/src/app/components/form-feedback/form-feedback.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="51" column="2" lean-forward="false" selection-start-line="51" selection-start-column="2" selection-end-line="51" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/psycho_front/src/app/components/test-results/test-results.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="374">
-          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-=======
         <state relative-caret-position="552">
           <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
->>>>>>> 597e0b34f18cfb22ebddffa19cd79b1c83e38bdf
           <folding>
             <element signature="e#0#59#0" expanded="true" />
           </folding>
@@ -1218,19 +1102,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/psycho_front/src/app/components/test-results/test-results.component.html">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="119">
-          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/psycho_front/src/app/components/test-results/test-results.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding />
-=======
         <state relative-caret-position="87">
           <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
         </state>
@@ -1238,9 +1109,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
->>>>>>> 597e0b34f18cfb22ebddffa19cd79b1c83e38bdf
+        <state relative-caret-position="783">
+          <caret line="42" column="13" lean-forward="true" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
         </state>
       </provider>
     </entry>
