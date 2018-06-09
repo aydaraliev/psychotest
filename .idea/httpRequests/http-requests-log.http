@@ -1,3 +1,29 @@
+POST http://localhost:5000/tests/results
+Content-Type: application/json
+
+{
+  "results": {"extraversion":15, "neuroticism":15, "openness":15, "consciousness":15, "friendly":15},
+  "user": {"city":"Bishkek", "country":"Kyrgyzstan", "dob": "12-05-1988", "education":"высшее",
+  "email":"test@mail.com", "gender":"Male", "nationality":"kg", "family":"Married", "work":"working", "sendEmail": "False"}
+}
+
+<> 2018-06-09T101859.200.json
+
+###
+
+POST http://localhost:5000/tests/results
+Content-Type: application/json
+
+{
+  "results": {"extraversion":15, "neuroticism":15, "openness":15, "consciousness":15, "friendly":15},
+  "user": {"city":"Bishkek", "country":"Kyrgyzstan", "dob": "12-05-1988", "education":"высшее",
+  "email":"test@mail.com", "gender":"Male", "nationality":"kg", "family":"Married", "work":"working", "sendEmail": "False"}
+}
+
+<> 2018-06-09T101738.500.html
+
+###
+
 POST http://localhost:5000/CRUD/tests/test_test
 Accept: application/json
 Cache-Control: no-cache
@@ -413,28 +439,6 @@ GET http://localhost:5000/tests/1
 Accept: application/json
 
 <> 2018-06-07T065102.200.json
-
-###
-
-POST http://localhost:5000/CRUD/questions/1
-Content-Type: application/json
-
-{ "questions" :
-  {
-  "question1" : ["привет", "салам"],
-  "question2" : ["привет. как дела?", "салам. иштерин кандай?"]
-  }
-}
-
-<> 2018-06-07T065055.200.json
-
-###
-
-POST http://localhost:5000/CRUD/tests/test_test
-Accept: application/json
-Cache-Control: no-cache
-
-<> 2018-06-07T065047.201.json
 
 ###
 

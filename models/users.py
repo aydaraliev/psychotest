@@ -15,7 +15,7 @@ class UserModel(db.Model):
 
     city = db.Column(db.String)
     country = db.Column(db.String)
-    dob = db.Column(db.Date)
+    dob = db.Column(db.String)
     education = db.Column(db.String)
     email = db.Column(db.String)
     family = db.Column(db.String)
