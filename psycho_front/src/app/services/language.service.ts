@@ -38,7 +38,7 @@ export class LanguageService {
   };
 
   getResultsText (object: any): Observable<Object> {
-    const url = `${this.apiUrl}/results`;
+    const url = `${this.apiUrl}/tests/results`;
     // console.log(object)
 
     return this.http.get<Object>(url, object);
