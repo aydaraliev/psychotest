@@ -29,3 +29,7 @@ button {
   cursor: pointer;
   text-decoration: none;
 }
+
+.test-result-container {
+  margin-bottom: 25px;
+}

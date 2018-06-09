@@ -2,7 +2,7 @@
   <h1>Спасибо</h1>
 
   <div class="col-md-12" *ngIf="info.length > 0">
-    <div *ngFor="let result of info">
+    <div *ngFor="let result of info" class="test-result-container">
       <h2>{{result.title}}</h2>
       <p class="text-highlight">{{result.subtitle}}</p>
       <p>{{result.text}}}</p>
