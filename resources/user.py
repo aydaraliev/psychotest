@@ -7,7 +7,7 @@ class User(Resource):
     parser.add_argument("results", type =dict, help="results go here")
     parser.add_argument("user", type = dict, help = "user details go here")
 
-    def get(self):
+    def post(self):
         data = self.parser.parse_args()
         user = UserModel(**data['results'], **data['user'])
         user.save_to_db()

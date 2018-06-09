@@ -54,7 +54,7 @@ export class FormFeedbackComponent implements DoCheck {
     this.langService.sendUser(sendingObject)
       .subscribe(
         response => {
-          localStorage.setItem('text-results', JSON.stringify(response));
+          localStorage.setItem('text-results', JSON.stringify(response.response));
         },
         error => console.log(error)
       );

@@ -25,7 +25,8 @@ export class TestResultsComponent implements DoCheck, OnInit {
 
   ngOnInit() {
     this.info = JSON.parse(localStorage.getItem('text-results'));
-    localStorage.removeItem('text-results');
+    console.log(JSON.parse(localStorage.getItem('text-results')));
+    //localStorage.removeItem('text-results');
   }
 
   ngDoCheck() {

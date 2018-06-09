@@ -35,3 +35,10 @@ psycho_front/e2e/*.map
 # System Files
 psycho_front.DS_Store
 psycho_frontThumbs.db
+
+# Pycharm
+.idea/*
+
+# Python
+*__pycache__**
+*.pyc
