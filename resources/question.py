@@ -12,7 +12,7 @@ class CRUDquestions(Resource):
 
         for key in data['questions'].keys():
             question = QuestionModel(ru_words=data['questions'][key][0], kg_words=data['questions'][key][1],
-                                     test_id=test_id)
+                                     test_id=test_id, question_number=data['questions'][2])
             question.save_to_db()
 
     def delete(self, test_id):
