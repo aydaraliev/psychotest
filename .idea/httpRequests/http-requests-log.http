@@ -1,3 +1,39 @@
+POST http://188.166.88.156/CRUD/questions/1
+Content-Type: application/json
+
+{ "questions" :
+  {
+  "question1" : ["привет", "салам", 1],
+  "question2" : ["привет. как дела?", "салам. иштерин кандай?", 2]
+  }
+}
+
+<> 2018-06-11T010930.404.html
+
+###
+
+POST http://188.166.88.156/CRUD/questions/1
+Content-Type: application/json
+
+{ "questions" :
+  {
+  "question1" : ["привет", "салам", 1],
+  "question2" : ["привет. как дела?", "салам. иштерин кандай?", 2]
+  }
+}
+
+<> 2018-06-11T010235.404.html
+
+###
+
+POST http://188.166.88.156/CRUD/tests/test_test
+Accept: application/json
+Cache-Control: no-cache
+
+<> 2018-06-11T010208.400.json
+
+###
+
 POST http://188.166.88.156/CRUD/tests/test_test
 Accept: application/json
 Cache-Control: no-cache
@@ -446,33 +482,6 @@ GET http://188.166.88.156/tests/1
 Accept: application/json
 
 <> 2018-06-08T032250.404.html
-
-###
-
-GET http://188.166.88.156:5000/tests/1
-Accept: application/json
-
-###
-
-POST http://188.166.88.156/CRUD/tests/test_test
-Accept: application/json
-Cache-Control: no-cache
-
-<> 2018-06-08T032242.404.html
-
-###
-
-POST http://188.166.88.156/CRUD/questions/1
-Content-Type: application/json
-
-{ "questions" :
-  {
-  "question1" : ["привет", "салам"],
-  "question2" : ["привет. как дела?", "салам. иштерин кандай?"]
-  }
-}
-
-<> 2018-06-08T032224.404.html
 
 ###
 

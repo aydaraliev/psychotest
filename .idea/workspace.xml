@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94a39719-1298-4ff6-8203-70b05b954b5d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-06-07T100400.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-06-07T110614.400.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-06-08T032224.404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-06-08T032242.404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/question.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/question.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,7 +55,25 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="create_questions.http" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/create_questions.http">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="question.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/question.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="406">
+              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="232">
@@ -122,14 +140,14 @@
         <option value="$PROJECT_DIR$/psycho_front/src/app/components/test-results/test-results.component.html" />
         <option value="$PROJECT_DIR$/psycho_front/src/app/components/test-results/test-results.component.ts" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/resources/question.py" />
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/create_questions.http" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/get_results.http" />
         <option value="$PROJECT_DIR$/psycho_front/src/app/services/language.service.ts" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/get_questions.http" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/get_test.http" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/create_test.http" />
         <option value="$PROJECT_DIR$/app.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/create_questions.http" />
+        <option value="$PROJECT_DIR$/resources/question.py" />
       </list>
     </option>
   </component>
@@ -222,6 +240,22 @@
       <list>
         <RestClientRequest>
           <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://188.166.88.156/CRUD/questions/1" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{ &quot;questions&quot; :&#10;  {&#10;  &quot;question1&quot; : [&quot;привет&quot;, &quot;салам&quot;, 1],&#10;  &quot;question2&quot; : [&quot;привет. как дела?&quot;, &quot;салам. иштерин кандай?&quot;, 2]&#10;  }&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
           <option name="urlBase" value="http://188.166.88.156/CRUD/tests/test_test" />
           <option name="urlPath" value="" />
           <option name="headers">
@@ -298,22 +332,6 @@
           </option>
           <option name="haveTextToSend" value="true" />
           <option name="textToSend" value="{&#10;  &quot;results&quot;: {&quot;extraversion&quot;:15, &quot;neuroticism&quot;:15, &quot;openness&quot;:15, &quot;consciousness&quot;:15, &quot;friendly&quot;:15},&#10;  &quot;user&quot;: {&quot;city&quot;:&quot;Bishkek&quot;, &quot;country&quot;:&quot;Kyrgyzstan&quot;, &quot;dob&quot;: &quot;12-05-1988&quot;, &quot;education&quot;:&quot;высшее&quot;,&#10;  &quot;email&quot;:&quot;test@mail.com&quot;, &quot;gender&quot;:&quot;Male&quot;, &quot;nationality&quot;:&quot;kg&quot;, &quot;family&quot;:&quot;Married&quot;, &quot;work&quot;:&quot;working&quot;, &quot;sendEmail&quot;: &quot;False&quot;}&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://188.166.88.156/CRUD/questions/1" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{ &quot;questions&quot; :&#10;  {&#10;  &quot;question1&quot; : [&quot;привет&quot;, &quot;салам&quot;, 1],&#10;  &quot;question2&quot; : [&quot;привет. как дела?&quot;, &quot;салам. иштерин кандай?&quot;, 2]&#10;  }&#10;}" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
         <RestClientRequest>
@@ -1146,13 +1164,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/create_questions.http">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/psycho_front/src/app/services/language.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
@@ -1160,13 +1171,6 @@
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/question.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="23" column="41" lean-forward="true" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -1194,6 +1198,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
           <caret line="16" column="60" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/create_questions.http">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/question.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
         </state>
       </provider>
     </entry>
