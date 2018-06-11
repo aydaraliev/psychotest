@@ -10,7 +10,7 @@ const httpOptions = {
 
 @Injectable()
 export class LanguageService {
-  private apiUrl = 'http://127.0.0.1:5000';  // URL to web
+  private apiUrl = 'http://188.166.88.156';  // URL to web
   object = null;
   textResults = null;
 
