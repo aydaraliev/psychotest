@@ -42,3 +42,7 @@ psycho_frontThumbs.db
 # Python
 *__pycache__*
 *.pyc
+
+# Database
+data.db
+database_fiil_with_data/elections/*

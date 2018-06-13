@@ -12,15 +12,3 @@ class User(Resource):
         user = UserModel(**data['results'], **data['user'])
         user.save_to_db()
         return {"response": user.calculate_results()}
-
-
-
-
-
-
-
-'''        voter = VoterModel(**data['name_last_name'])
-        voters = VoterModel.find_by_f_l_name(voter.first_name, voter.last_name)
-        for v in voters:
-            print(v.json())
-'''

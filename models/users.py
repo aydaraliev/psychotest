@@ -1,4 +1,5 @@
 from db import db
+from models.interpretation import InterpretationModel
 
 
 class UserModel(db.Model):
@@ -43,8 +44,33 @@ class UserModel(db.Model):
         self.email = email
 
     def calculate_results(self):
-        return [{"title": 'extraversion', "subtitle": "bla bla", "text": "bla bla"},
-         {"title": "neuroticism", "subtitle": "zaebal etet test", "text": "bla bla"}]
+        results = []
+        def calculate_char(current_char):
+            score_for_current_char = getattr(self, current_char)
+            if 0 <= score_for_current_char < 21:
+                return InterpretationModel.return_characteristic(character=current_char, line_num=1)
+            elif 21 <= score_for_current_char < 42:
+                print(2)
+                return InterpretationModel.return_characteristic(character=current_char, line_num=2)
+            elif 42 <= score_for_current_char < 60:
+                print(3)
+                return InterpretationModel.return_characteristic(character=current_char, line_num=3)
+            elif 60 <= score_for_current_char < 85:
+                print(4)
+                return InterpretationModel.return_characteristic(character=current_char, line_num=4)
+            elif 85 <=  score_for_current_char <= 100:
+                print(5)
+                return InterpretationModel.return_characteristic(character=current_char, line_num=5)
+
+
+        for character in ["extraversion", "neuroticism", "openness", "consciousness", "friendly"]:
+            results.append(calculate_char(character))
+
+
+        return results
+
+        #[{"title": 'extraversion', "subtitle": "bla bla", "text": "bla bla"},
+         #{"title": "neuroticism", "subtitle": "zaebal etot test", "text": "bla bla"}]
 
 
     def save_to_db(self):
