@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import {QuestionsResponse} from '../classes/questionsResponse';
 import { Response} from "../classes/response";
+import {Voter} from "../classes/voter";
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -47,5 +48,12 @@ export class LanguageService {
     // console.log(sendingObject)
     localStorage.removeItem('results')
     return this.http.post<Response>(url, sendingObject, httpOptions);
+  };
+
+  findVoted (firstname: string, secondname: string): Observable<Voter> {
+    const url = `${this.apiUrl}/tests/voter`;
+    const sendingObject = { firstname, secondname };
+
+    return this.http.post<Voter>(url, sendingObject, httpOptions)
   }
 }
