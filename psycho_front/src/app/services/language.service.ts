@@ -50,9 +50,9 @@ export class LanguageService {
     return this.http.post<Response>(url, sendingObject, httpOptions);
   };
 
-  findVoted (firstname: string, secondname: string): Observable<Voter> {
+  findVoted (firstname: string, lastname: string): Observable<Voter> {
     const url = `${this.apiUrl}/tests/voter`;
-    const sendingObject = { firstname, secondname };
+    const sendingObject = { firstname, lastname };
 
     return this.http.post<Voter>(url, sendingObject, httpOptions)
   }
