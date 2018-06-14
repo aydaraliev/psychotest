@@ -11,6 +11,9 @@ import {LanguageService} from "../../services/language.service";
 export class VotedComponent {
   firstName = '';
   secondName = '';
+  matches = [];
+  sended = false;
+  voter = null;
   constructor(
     private langService: LanguageService,
     private router: Router
@@ -20,9 +23,19 @@ export class VotedComponent {
     this.langService.findVoted(firstName, secondName)
       .subscribe(
         response => {
-          console.log(response);
+          console.log(response.matches);
+          this.sended = true;
+          this.matches = response.matches;
         },
-        error => console.log(error)
+        error => {
+          console.log(error);
+          this.sended = true;
+        }
       );
-  }
+  };
+
+  tagVoter (voter: Object) :void {
+    localStorage.setItem('voter', JSON.stringify(voter));
+    this.router.navigate(['/feedback']);
+  };
 }

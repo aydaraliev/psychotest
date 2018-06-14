@@ -43,14 +43,15 @@ export class LanguageService {
     const url = `${this.apiUrl}/tests/results`;
     const sendingObject = {
       user: object,
-      results: JSON.parse(localStorage.getItem('results'))
+      results: JSON.parse(localStorage.getItem('results')),
+      voter: JSON.parse(localStorage.getItem('voter'))
     };
-    // console.log(sendingObject)
-    localStorage.removeItem('results')
+    localStorage.removeItem('results');
+    localStorage.removeItem('voter');
     return this.http.post<Response>(url, sendingObject, httpOptions);
   };
 
-  findVoted (firstname: string, lastname: string): Observable<Voter> {
+  findVoted (lastname: string, firstname: string): Observable<Voter> {
     const url = `${this.apiUrl}/tests/voter`;
     const sendingObject = { firstname, lastname };
 

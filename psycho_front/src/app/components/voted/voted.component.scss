@@ -1,0 +1,9 @@
+.item-container {
+  &:first-child {
+    padding-bottom: 0;
+  }
+
+  &:nth-child(2n) {
+    padding-top: 0;
+  }
+}

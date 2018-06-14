@@ -21,3 +21,49 @@
     </button>
   </div>
 </form>
+
+<div class="container-fluid item-container new-page" *ngIf="sended">
+  <h2>Список проголосовавших:</h2>
+
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <td>Место голосования</td>
+      <td>Фамилия</td>
+      <td>Имя</td>
+      <td>Отчество</td>
+      <td>Год рождения</td>
+      <td>Это Я</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let match of matches">
+      <td>{{match.voting_place}}</td>
+      <td>{{match.lastname}}</td>
+      <td>{{match.firstname}}</td>
+      <td>{{match.patronym}}</td>
+      <td>{{match.birthday}}</td>
+      <td><input [value]='match' type="radio" name="voter" value="match" [(ngModel)]="voter"></td>
+    </tr>
+    </tbody>
+  </table>
+
+  <h4 *ngIf="!matches.length">По запросу ничего не найдено</h4>
+
+  <div class="row d-flex justify-content-center">
+    <button
+      class="form-button form-button--submit default-button"
+      [disabled]="!voter"
+      (click)="tagVoter(voter)"
+    >
+      Это я
+    </button>
+
+    <button
+      class="form-button form-button--submit default-button"
+      routerLink="/feedback"
+    >
+      Не нашел себя
+    </button>
+  </div>
+</div>
