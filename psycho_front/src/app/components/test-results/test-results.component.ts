@@ -26,6 +26,7 @@ export class TestResultsComponent implements DoCheck, OnInit {
   ) { }
 
   ngOnInit() {
+    this.info = [];
     setTimeout(() => {
       this.info = this.langService.getResults();
     }, 1000);
@@ -37,5 +38,27 @@ export class TestResultsComponent implements DoCheck, OnInit {
 
   ngDoCheck() {
     this.lang = Number(localStorage.lang);
+  }
+
+  changeTitle (title: string) :string {
+    switch (title) {
+      case ('extraversion'):
+        return 'Экстраверсия';
+
+      case ('neuroticism'):
+        return 'Нейротизм';
+
+      case ('openness '):
+        return 'Открытость';
+
+      case ('consciousness'):
+        return 'Сознательность';
+
+      case ('friendly'):
+        return 'Доброжелательность';
+
+      default:
+        return title
+    }
   }
 }
