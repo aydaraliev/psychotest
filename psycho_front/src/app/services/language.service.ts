@@ -56,5 +56,9 @@ export class LanguageService {
     const sendingObject = { firstname, lastname };
 
     return this.http.post<Voter>(url, sendingObject, httpOptions)
+  };
+
+  getResults () {
+    return JSON.parse(localStorage.getItem('text-results'));
   }
 }

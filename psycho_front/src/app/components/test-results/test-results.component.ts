@@ -1,11 +1,12 @@
 import { Component, DoCheck, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-// import { Info} from '../../classes/info';
+import {LanguageService} from "../../services/language.service";
 
 @Component({
   selector: 'app-test-results',
   templateUrl: './test-results.component.html',
-  styleUrls: ['./test-results.component.css']
+  styleUrls: ['./test-results.component.css'],
+  providers: [LanguageService]
 })
 export class TestResultsComponent implements DoCheck, OnInit {
   lang: number;
@@ -20,11 +21,18 @@ export class TestResultsComponent implements DoCheck, OnInit {
   // ];
   info = [];
   constructor(
-    private router: Router
+    private router: Router,
+    private langService: LanguageService
   ) { }
 
   ngOnInit() {
-    this.info = JSON.parse(localStorage.getItem('text-results'));
+    setTimeout(() => {
+      this.info = this.langService.getResults();
+    }, 1000);
+
+    setTimeout(() => {
+      localStorage.removeItem('text-results');
+    }, 3000)
   }
 
   ngDoCheck() {

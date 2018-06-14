@@ -52,7 +52,6 @@ export class TestPaperComponent implements OnInit, DoCheck {
   ngDoCheck() {
     this.lang = Number(localStorage.lang);
     this.calculateProgress();
-    this.calculateResults();
   }
 
   /**
@@ -63,8 +62,10 @@ export class TestPaperComponent implements OnInit, DoCheck {
     if (this.currentQuestion !== this.questions.length - 1) {
       this.questions[this.currentQuestion].value = value;
       this.currentQuestion += 1;
+      this.calculateResults();
     } else {
       this.questions[this.currentQuestion].value = value;
+      this.calculateResults();
       const sendingObject = {
         extraversion: this.extraversion,
         neuroticism: this.neuroticism,
@@ -106,23 +107,23 @@ export class TestPaperComponent implements OnInit, DoCheck {
   calculateResults(): void {
     this.questions && this.questions.map((item, key) => {
       if (key % 5 === 0) {
-        this.extraversion = item.value * 100 / 16;
+        this.extraversion += item.value * 100 / 16;
       }
 
       if ((key + 1) % 5 === 0) {
-        this.neuroticism = item.value * 100 / 16;
+        this.neuroticism += item.value * 100 / 16;
       }
 
       if ((key + 2) % 5 === 0) {
-        this.openness = item.value * 100 / 16;
+        this.openness += item.value * 100 / 16;
       }
 
       if ((key + 3) % 5 === 0) {
-        this.consciousness = item.value * 100 / 16;
+        this.consciousness += item.value * 100 / 16;
       }
 
       if ((key + 4) % 5 === 0) {
-        this.friendly = item.value * 100 / 16;
+        this.friendly += item.value * 100 / 16;
       }
     });
   }

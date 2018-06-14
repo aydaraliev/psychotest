@@ -20,7 +20,7 @@ export class FormFeedbackComponent implements DoCheck {
   // gender = ['Пол', 'Калаасы'];
   dob = '';
   gender = '';
-  country = '';
+  country = 'Кыргызская Республика';
   nationality = '';
   education = '';
   family = '';
