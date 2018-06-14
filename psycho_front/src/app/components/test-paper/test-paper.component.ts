@@ -34,9 +34,9 @@ export class TestPaperComponent implements OnInit, DoCheck {
     this.currentQuestion = 0;
     this.lang = this.langService.getLanguage();
     this.answers = [
-      {title: ['Нет, это не обо мне', ''], value: 1},
-      {title: ['Иногда это обо мне, иногда — нет', ''], value: 2},
-      {title: ['Да, это точно обо мне', ' '], value: 3}
+      {title: ['Нет, это не обо мне', ''], value: 0},
+      {title: ['Иногда это обо мне, иногда — нет', ''], value: 1},
+      {title: ['Да, это точно обо мне', ' '], value: 2}
     ];
 
     this.langService.getQuestions(1)
@@ -82,7 +82,7 @@ export class TestPaperComponent implements OnInit, DoCheck {
 
   onForward(): void {
     if (this.currentQuestion !== this.questions.length - 1) {
-      this.currentQuestion += 1;
+      this.currentQuestion = 1;
     }
   }
 
@@ -96,7 +96,7 @@ export class TestPaperComponent implements OnInit, DoCheck {
     let count = 0;
     this.questions && this.questions.map(item => {
       if (item.value) {
-        count += 1;
+        count = 1;
       }
     });
     if (this.questions) {
@@ -105,27 +105,28 @@ export class TestPaperComponent implements OnInit, DoCheck {
   }
 
   calculateResults(): void {
-    this.questions && this.questions.map((item, key) => {
-      if (key % 5 === 0) {
-        this.extraversion += item.value * 100 / 16;
-      }
+    const id = this.questions[this.currentQuestion - 1].question_number;
+    const value = this.questions[this.currentQuestion - 1].value;
 
-      if ((key + 1) % 5 === 0) {
-        this.neuroticism += item.value * 100 / 16;
-      }
+    if ((id + 4) % 5 === 0) {
+      this.extraversion += ((value * 100) / 16);
+    }
 
-      if ((key + 2) % 5 === 0) {
-        this.openness += item.value * 100 / 16;
-      }
+    if ((id + 3) % 5 === 0) {
+      this.neuroticism += ((value * 100) / 16);
+    }
 
-      if ((key + 3) % 5 === 0) {
-        this.consciousness += item.value * 100 / 16;
-      }
+    if ((id + 2) % 5 === 0) {
+      this.openness += ((value * 100) / 16);
+    }
 
-      if ((key + 4) % 5 === 0) {
-        this.friendly += item.value * 100 / 16;
-      }
-    });
+    if ((id + 1) % 5 === 0) {
+      this.consciousness += ((value * 100) / 16);
+    }
+
+    if (id % 5 === 0) {
+      this.friendly += ((value * 100) / 16);
+    }
   }
 
 }

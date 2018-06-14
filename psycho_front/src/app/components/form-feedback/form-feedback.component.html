@@ -24,14 +24,15 @@
 
   <div class="form-group">
     <label for="country">Гражданство <b>*</b></label>
-    <input class="form-control" id="country" name="country" type="text" value="Кыргызская Республика"  required [(ngModel)]="country">
+    <input class="form-control" id="country" name="country" type="text" required [(ngModel)]="country">
   </div>
 
   <div class="form-group">
     <label for="nationality">Национальность</label>
     <select class="form-control" name="nationality" id="nationality" [(ngModel)]="nationality">
-      <option value="kg">Мужчина</option>
-      <option value="ru">Женщина</option>
+      <option value="kg">Кыргыз(-ка)</option>
+      <option value="ru">Русский(-ая)</option>
+      <option value="uz">Узбек(-чка)</option>
       <option value="another">Другое</option>
       <option value="no-answer">Предпочту не отвечать</option>
     </select>
