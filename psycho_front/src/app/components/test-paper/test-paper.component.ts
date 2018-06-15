@@ -16,6 +16,7 @@ export class TestPaperComponent implements OnInit, DoCheck {
   questions = [];
   answers: any;
   title: any;
+  count = 0;
   currentQuestion: number;
   currentPercent: number;
   extraversion = 0;
@@ -50,8 +51,7 @@ export class TestPaperComponent implements OnInit, DoCheck {
     }
 
   ngDoCheck() {
-    this.lang = Number(localStorage.lang);
-    this.calculateProgress();
+    // this.lang = Number(localStorage.lang);
   }
 
   /**
@@ -59,6 +59,7 @@ export class TestPaperComponent implements OnInit, DoCheck {
    * @param {number} value - value of answer
    */
   onAnswer(value: number): void {
+    this.calculateProgress();
     if (this.currentQuestion !== this.questions.length - 1) {
       this.questions[this.currentQuestion].value = value;
       this.currentQuestion += 1;
@@ -93,15 +94,8 @@ export class TestPaperComponent implements OnInit, DoCheck {
   }
 
   calculateProgress(): void {
-    let count = 0;
-    this.questions && this.questions.map(item => {
-      if (item.value) {
-        count = 1;
-      }
-    });
-    if (this.questions) {
-      this.currentPercent = count * 100 / this.questions.length;
-    }
+    this.count += 1;
+    this.currentPercent = this.count * 100 / this.questions.length;
   }
 
   calculateResults(): void {

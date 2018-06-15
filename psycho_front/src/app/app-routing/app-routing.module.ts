@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   { path: 'welcome', component: WelcomeComponent },
   { path: 'tests/:id', component: TestPaperComponent },
-  { path: 'tests', component: TestListComponent },
+  // { path: 'tests', component: TestListComponent },
   { path: 'terms', component: TermsComponent },
   { path: 'privacy', component: PrivacyComponent },
   { path: 'feedback', component: FormFeedbackComponent },

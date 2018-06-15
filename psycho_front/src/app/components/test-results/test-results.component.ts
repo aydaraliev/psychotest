@@ -10,15 +10,11 @@ import {LanguageService} from "../../services/language.service";
 })
 export class TestResultsComponent implements DoCheck, OnInit {
   lang: number;
-  // thanks = ['Спасибо!', 'Рахмат!'];
-  // questionLabel = ['Отражающий вопрос:', 'Ойлуу суроо:'];
-  // buttons = [
-  //   {
-  //     text: ['Пройти другой тест', 'Дагы бир Тест алып'],
-  //   }
-  //   // text: ['Поделиться через фейсбук', 'Фейсбукта бөлүшүү'],
-  //   // text: ['Поделиться на Twitter', 'Twitter бөлүшүү'],
-  // ];
+  extraversion = 0;
+  neuroticism = 0;
+  openness = 0;
+  consciousness = 0;
+  friendly = 0;
   info = [];
   constructor(
     private router: Router,
@@ -26,13 +22,21 @@ export class TestResultsComponent implements DoCheck, OnInit {
   ) { }
 
   ngOnInit() {
-    this.info = [];
+    // JSON.parse(localStorage.getItem('results'))
     setTimeout(() => {
       this.info = this.langService.getResults();
+      const psychoParams = JSON.parse(localStorage.getItem('results'));
+
+      this.extraversion = psychoParams.extraversion;
+      this.neuroticism = psychoParams.neuroticism;
+      this.openness = psychoParams.openness;
+      this.consciousness = psychoParams.consciousness;
+      this.friendly = psychoParams.friendly;
     }, 1000);
 
     setTimeout(() => {
       localStorage.removeItem('text-results');
+      localStorage.removeItem('results');
     }, 3000)
   }
 

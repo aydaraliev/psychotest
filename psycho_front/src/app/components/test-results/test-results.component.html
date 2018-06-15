@@ -1,9 +1,9 @@
 <div class="container-fluid item-container new-page">
   <h1>Спасибо</h1>
 
-  <div *ngIf="!info.length">Загрузка...</div>
+  <div *ngIf="!info">Загрузка...</div>
 
-  <div class="col-md-12" *ngIf="info.length">
+  <div class="col-md-12" *ngIf="info">
     <div *ngFor="let result of info" class="test-result-container">
       <h2>{{changeTitle(result.title)}}</h2>
       <p class="text-highlight">{{result.subtitle}}</p>
@@ -11,9 +11,12 @@
     </div>
   </div>
 
-  <div class="container-fluid text-center">
-    <button routerLink="/tests">
-      Пройти другой тест
-    </button>
-  </div>
+  <app-results
+    [extraversion]="extraversion"
+    [neuroticism]="neuroticism"
+    [openness]="openness"
+    [consciousness]="consciousness"
+    [friendly]="friendly"
+  >
+  </app-results>
 </div>

@@ -46,7 +46,7 @@ export class LanguageService {
       results: JSON.parse(localStorage.getItem('results')),
       voter: JSON.parse(localStorage.getItem('voter'))
     };
-    localStorage.removeItem('results');
+    // localStorage.removeItem('results');
     localStorage.removeItem('voter');
     return this.http.post<Response>(url, sendingObject, httpOptions);
   };
