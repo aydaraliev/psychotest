@@ -1,5 +1,9 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
+html {
+  height: 100%;
+}
+
 .container-fluid {
   margin: 0 auto;
   max-width: 1000px;
@@ -11,6 +15,7 @@
 
 body {
   background-color: #35435D;
+  height: 100%;
 }
 
 .new-page {

@@ -1,5 +1,6 @@
 import { Component, DoCheck } from '@angular/core';
 import { LanguageService } from '../../../services/language.service';
+declare function require(path: string);
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,7 @@ import { LanguageService } from '../../../services/language.service';
 })
 export class HeaderComponent implements DoCheck {
   lang = 0;
-  moreTests = ['Больше тестов', 'Көбүрөөк тесттер'];
+  imagePath = require('../../../../img/AUCA-Logo-2-tier-Left-COL22.png');
 
   constructor(
     private langService: LanguageService
@@ -20,6 +21,6 @@ export class HeaderComponent implements DoCheck {
   }
 
   ngDoCheck() {
-    this.lang = Number(localStorage.lang);
+    // this.lang = Number(localStorage.lang);
   }
 }
