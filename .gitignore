@@ -46,3 +46,6 @@ psycho_frontThumbs.db
 # Database
 data.db
 database_fiil_with_data/elections/*
+
+#Pycharm
+.idea/
