@@ -11,13 +11,17 @@ class VoterModel(db.Model):
     patronym = db.Column(db.String)
     birthday = db.Column(db.String)
     voting_place = db.Column(db.String)
+    parliamentary = db.Column(db.Boolean)
+    presidential = db.Column(db.Boolean)
 
-    def __init__(self, firstname, lastname, patronym, birthday, voting_place):
+    def __init__(self, firstname, lastname, patronym, birthday, voting_place, parliamentary, presidential):
         self.firstname = firstname
         self.lastname = lastname
         self.patronym = patronym
         self.birthday = birthday
         self.voting_place = voting_place
+        self.parliamentary = parliamentary
+        self.presidential = presidential
 
     def json(self):
         print({"firstname": self.firstname, "lastname": self.lastname,

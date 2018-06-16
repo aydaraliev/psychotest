@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 engine = create_engine('sqlite:///../data.db', echo=False)
 
 #creating test
-test = pd.DataFrame({'name': ["Большая пятерка» личностных качеств"]})
+test = pd.DataFrame({'name': ["'Большая пятерка' личностных качеств"]})
 test.to_sql('tests', con=engine, if_exists='append', index = False)
 
 file = open('personality_feedback_test/questions.txt')

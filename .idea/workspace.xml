@@ -2,32 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94a39719-1298-4ff6-8203-70b05b954b5d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/database_fill_with_data/create_interpretations.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database_fill_with_data/create_questions_and_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database_fill_with_data/create_voters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/voters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/voter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-06-08T032250.404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-06-08T042431.404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-06-08T044834.404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-06-08T044848.404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-06-08T071412.404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-06-08T072130.404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-06-08T072235.404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-06-08T072604.404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-06-08T072611.404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-06-08T080659.404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-06-08T080713.404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-06-08T080720.404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/interpretation.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/interpretation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/users.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_fill_with_data/create_questions_and_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/database_fill_with_data/create_questions_and_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_fill_with_data/create_voters.py" beforeDir="false" afterPath="$PROJECT_DIR$/database_fill_with_data/create_voters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_fill_with_data/elections/Presidential/.~lock.MID.xlsx#" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_fill_with_data/elections/Presidential/batken.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/database_fill_with_data/elections/Presidential/batken.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_fill_with_data/elections/Presidential/bishkek.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/database_fill_with_data/elections/Presidential/bishkek.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_fill_with_data/elections/Presidential/chuy.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/database_fill_with_data/elections/Presidential/chuy.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_fill_with_data/elections/Presidential/ik.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/database_fill_with_data/elections/Presidential/ik.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_fill_with_data/elections/Presidential/ja.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/database_fill_with_data/elections/Presidential/ja.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_fill_with_data/elections/Presidential/naryn.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/database_fill_with_data/elections/Presidential/naryn.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_fill_with_data/elections/Presidential/osh city.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/database_fill_with_data/elections/Presidential/osh city.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_fill_with_data/elections/Presidential/osh.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/database_fill_with_data/elections/Presidential/osh.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_fill_with_data/elections/Presidential/talas.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/database_fill_with_data/elections/Presidential/talas.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/voters.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/voters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/psycho_front/src/app/services/language.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/psycho_front/src/app/services/language.service.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,7 +30,7 @@
     <SUITE FILE_PATH="coverage/psychotest$create_questions.coverage" NAME="create_questions Coverage Results" MODIFIED="1528790757679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/database_creation" />
     <SUITE FILE_PATH="coverage/psychotest$create_voters.coverage" NAME="create_voters Coverage Results" MODIFIED="1528832236441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/database_fill_with_data" />
     <SUITE FILE_PATH="coverage/psychotest$create_interpretations.coverage" NAME="create_interpretations Coverage Results" MODIFIED="1528796216962" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/database_fill_with_data" />
-    <SUITE FILE_PATH="coverage/psychotest$app.coverage" NAME="app Coverage Results" MODIFIED="1528883085387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/psychotest$app.coverage" NAME="app Coverage Results" MODIFIED="1529136340854" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -62,34 +51,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="questions.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/questions.py">
+      <file leaf-file-name="user.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/user.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1067">
-              <caret line="39" column="33" lean-forward="true" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+            <state relative-caret-position="319">
+              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#0#44#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="voter.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/voter.py">
+      <file leaf-file-name="users.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/users.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+            <state relative-caret-position="2233">
+              <caret line="78" selection-start-line="78" selection-end-line="78" />
               <folding>
-                <element signature="e#0#44#0" expanded="true" />
+                <element signature="e#0#17#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -98,8 +78,8 @@
       <file leaf-file-name="create_voters.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database_fill_with_data/create_voters.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1566">
-              <caret line="96" column="15" selection-start-line="96" selection-start-column="15" selection-end-line="96" selection-end-column="15" />
+            <state relative-caret-position="552">
+              <caret line="143" column="70" selection-start-line="143" selection-start-column="70" selection-end-line="143" selection-end-column="70" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -107,29 +87,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="create_questions_and_test.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database_fill_with_data/create_questions_and_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1288">
-              <caret line="47" column="35" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
+            <state relative-caret-position="145">
+              <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="voters.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/voters.py">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="23" column="104" selection-start-line="23" selection-start-column="104" selection-end-line="23" selection-end-column="104" />
+            <state relative-caret-position="551">
+              <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="find_voter.http" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/find_voter.http">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/psycho_front/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+            <state relative-caret-position="638">
+              <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -151,6 +131,9 @@
       <find>subscribe(</find>
       <find>sendUser</find>
       <find>test</find>
+      <find>axis</find>
+      <find>prin</find>
+      <find>print</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/psycho_front/src</dir>
@@ -188,7 +171,6 @@
         <option value="$PROJECT_DIR$/psycho_front/src/app/components/form-feedback/form-feedback.component.ts" />
         <option value="$PROJECT_DIR$/psycho_front/src/app/components/test-results/test-results.component.html" />
         <option value="$PROJECT_DIR$/psycho_front/src/app/components/test-results/test-results.component.ts" />
-        <option value="$PROJECT_DIR$/psycho_front/src/app/services/language.service.ts" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/get_questions.http" />
         <option value="$PROJECT_DIR$/resources/question.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/create_test.http" />
@@ -206,13 +188,14 @@
         <option value="$PROJECT_DIR$/models/__init__.py" />
         <option value="$PROJECT_DIR$/database_fill_with_data/elections/create_voters.py" />
         <option value="$PROJECT_DIR$/app.py" />
-        <option value="$PROJECT_DIR$/database_fill_with_data/create_questions_and_test.py" />
         <option value="$PROJECT_DIR$/database_fill_with_data/create_interpretations.py" />
-        <option value="$PROJECT_DIR$/models/voters.py" />
         <option value="$PROJECT_DIR$/resources/voter.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/find_voter.http" />
-        <option value="$PROJECT_DIR$/database_fill_with_data/create_voters.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/psycho_front/src/app/services/language.service.ts" />
+        <option value="$PROJECT_DIR$/models/voters.py" />
+        <option value="$PROJECT_DIR$/database_fill_with_data/create_questions_and_test.py" />
+        <option value="$PROJECT_DIR$/database_fill_with_data/create_voters.py" />
       </list>
     </option>
   </component>
@@ -230,9 +213,6 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/psycho_front/node_modules" />
-  </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/psycho_front/package.json" />
@@ -240,9 +220,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="129" />
-    <option name="y" value="13" />
+    <option name="y" value="69" />
     <option name="width" value="3072" />
-    <option name="height" value="1788" />
+    <option name="height" value="1732" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -272,25 +252,7 @@
             <path>
               <item name="psychotest" type="b2602c69:ProjectViewProjectNode" />
               <item name="psychotest" type="462c0819:PsiDirectoryNode" />
-              <item name="database_fill_with_data" type="462c0819:PsiDirectoryNode" />
-              <item name="elections" type="462c0819:PsiDirectoryNode" />
-              <item name="Parliamentary" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="psychotest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="psychotest" type="462c0819:PsiDirectoryNode" />
-              <item name="database_fill_with_data" type="462c0819:PsiDirectoryNode" />
-              <item name="personality_feedback_test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="psychotest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="psychotest" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="psychotest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="psychotest" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="psychotest" type="b2602c69:ProjectViewProjectNode" />
@@ -316,7 +278,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="rest.client.default.execution.environment" value="development" />
-    <property name="settings.editor.selected.configurable" value="pyconsole" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/psycho_front/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -905,25 +867,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="create_questions" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="psychotest" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/database_creation" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/database_creation/create_questions.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="create_questions_and_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="psychotest" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -962,20 +905,29 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/psycho_front/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+    </configuration>
     <list>
       <item itemvalue="Python.app" />
-      <item itemvalue="Python.create_questions" />
       <item itemvalue="Python.create_interpretations" />
       <item itemvalue="Python.create_questions_and_test" />
       <item itemvalue="Python.create_voters" />
+      <item itemvalue="npm.start" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.create_voters" />
         <item itemvalue="Python.app" />
+        <item itemvalue="npm.start" />
         <item itemvalue="Python.create_interpretations" />
         <item itemvalue="Python.create_questions_and_test" />
-        <item itemvalue="Python.create_questions" />
       </list>
     </recent_temporary>
   </component>
@@ -1032,18 +984,17 @@
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.49966466" weight="0.32956812" />
       <window_info anchor="bottom" id="Python Console" order="15" weight="0.32956812" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.27906978" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.3229236" />
       <window_info id="npm" order="0" sideWeight="0.23185265" side_tool="true" weight="0.2753186" />
-      <window_info anchor="bottom" id="Terminal" order="13" weight="0.5933555" />
-      <window_info anchor="bottom" id="TypeScript" order="0" sideWeight="0.49966466" weight="0.32956812" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.76814735" visible="true" weight="0.28303152" />
+      <window_info anchor="bottom" id="Terminal" order="13" weight="0.66976744" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.76814735" visible="true" weight="0.29107982" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" weight="0.32964453" />
-      <window_info anchor="bottom" id="Find" order="3" weight="0.3297943" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="3" sideWeight="0.5009901" side_tool="true" weight="0.2568746" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TypeScript" order="0" sideWeight="0.49966466" weight="0.32956812" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1053,6 +1004,7 @@
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" order="16" weight="0.3297943" />
+      <window_info anchor="bottom" id="Find" order="3" weight="0.3297943" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="17" weight="0.3297943" />
     </layout>
   </component>
@@ -1102,13 +1054,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/models/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="15" column="61" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/check.py" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/rest-api_5.http" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http" />
@@ -1199,9 +1144,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1624">
           <caret line="56" column="44" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1232,16 +1174,6 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/delete_questions.http">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/psycho_front/src/app/services/language.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/get_questions.http">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1252,33 +1184,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/users.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="69" column="22" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/psycho_front/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/create_test.http">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/database_fill_with_data/questions.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1131">
-          <caret line="39" column="3" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/database_fill_with_data/questions.txt" />
     <entry file="file://$PROJECT_DIR$/models/interpretation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="899">
@@ -1286,9 +1195,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database_fill_with_data/create_test.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/database_fill_with_data/create_test.py" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/get_test.http">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
@@ -1307,9 +1214,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1317,9 +1221,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1327,52 +1228,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="1" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/user.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="319">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database_fill_with_data/elections/create_voters.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database_fill_with_data/create_questions_and_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/database_fill_with_data/elections/create_voters.py" />
     <entry file="file://$PROJECT_DIR$/database_fill_with_data/create_interpretations.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="754">
           <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1067">
-          <caret line="39" column="33" lean-forward="true" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1397,30 +1270,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/voters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="23" column="104" selection-start-line="23" selection-start-column="104" selection-end-line="23" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/voter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
           <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database_fill_with_data/create_voters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1566">
-          <caret line="96" column="15" selection-start-line="96" selection-start-column="15" selection-end-line="96" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1428,6 +1281,64 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1288">
           <caret line="47" column="35" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/psycho_front/src/environments/environment.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/psycho_front/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/psycho_front/src/app/services/language.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/users.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2233">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/voters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database_fill_with_data/create_voters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="143" column="70" selection-start-line="143" selection-start-column="70" selection-end-line="143" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database_fill_with_data/create_questions_and_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
         </state>
       </provider>
     </entry>
