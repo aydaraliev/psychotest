@@ -41,11 +41,14 @@ export class LanguageService {
 
   sendUser (object: any): Observable<Response> {
     const url = `${this.apiUrl}/tests/results`;
+    const user = object;
+    user.uuid4 = JSON.parse(localStorage.getItem('uuid4'));
+    user.responses = JSON.parse(localStorage.getItem('backQuestions'));
+
     const sendingObject = {
-      user: object,
+      user,
       results: JSON.parse(localStorage.getItem('results')),
-      voter: JSON.parse(localStorage.getItem('voter')),
-      responses: JSON.parse(localStorage.getItem('backQuestions')),
+      voter: JSON.parse(localStorage.getItem('voter'))
     };
     // localStorage.removeItem('results');
     localStorage.removeItem('voter');
