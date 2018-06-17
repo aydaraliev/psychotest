@@ -17,6 +17,9 @@ class SearchVoterModel(db.Model):
         self.firstname = firstname
         self.lastname = lastname
 
+    def to_dict(self):
+        return {"uuid4": self.uuid4, "birthday": self.birthday, "firstname": self.firstname, "lastname": self.lastname}
+
     def save_to_db(self):
         db.session.add(self)
         db.session.commit()

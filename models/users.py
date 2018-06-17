@@ -27,10 +27,11 @@ class UserModel(db.Model):
 
     responses = db.Column(db.String)
     uuid4 = db.Column(db.String)
+    ru_language = db.Column(db.Boolean)
 
     def __init__(self, extraversion, neuroticism, openness, consciousness, friendly,
                  city, country, dob, education, email, gender, nationality,
-                 responses, uuid4, family=None, work=None, sendemail=False):
+                 responses, uuid4, family=None, work=None, sendEmail=False, ru_language=False):
         self.extraversion = extraversion
         self.neuroticism = neuroticism
         self.openness = openness
@@ -49,7 +50,8 @@ class UserModel(db.Model):
         self.city = city
         self.country = country
         self.email = email
-        self.sendEmail = sendemail
+        self.sendEmail = sendEmail
+        self.ru_language = ru_language
 
     def calculate_results(self):
         results = []
@@ -79,6 +81,14 @@ class UserModel(db.Model):
 
         #[{"title": 'extraversion', "subtitle": "bla bla", "text": "bla bla"},
         #{"title": "neuroticism", "subtitle": "zaebal etot test", "text": "bla bla"}]
+
+    def to_dict(self):
+        return {"uuid4": self.uuid4, "responses": self.responses, "extraversion": self.extraversion,
+                "neuroticism": self.neuroticism, "openness": self.openness, "conciousness": self.consciousness,
+                "friendly": self.friendly, "birthday": self.dob, "gender": self.gender,
+                "nationality": self.nationality, "education": self.education, "family": self.family,
+                "work": self.work, "city": self.city, "country": self.country, "email": self.email,
+                "send_email": self.sendEmail, "test_in_russian": self.ru_language}
 
 
     def save_to_db(self):

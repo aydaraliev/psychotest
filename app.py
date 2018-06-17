@@ -10,6 +10,7 @@ from resources.user import UserModel, User
 from models.interpretation import InterpretationModel
 from resources.voter import Voter, VoterModel, SearchVoterModel
 from resources.foundOrNotEP import FoundOrNot, FoundOrNotModel
+from resources.download_results import FileDownload
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
@@ -32,6 +33,7 @@ api.add_resource(Test, '/tests/<int:id>')
 api.add_resource(User, '/tests/results')
 api.add_resource(Voter, '/tests/voter')
 api.add_resource(FoundOrNot, '/tests/found_not_found')
+api.add_resource(FileDownload, '/tests/get_all_users')
 
 if __name__ == '__main__':
     from db import db

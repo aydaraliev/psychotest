@@ -16,6 +16,9 @@ class FoundOrNotModel(db.Model):
         self.found_presidential = found_presidential
         self.found_parliamentary = found_parliamentary
 
+    def to_dict(self):
+        return {"uuid4": self.uuid4, "found_presidential": self.found_presidential, "found_parliamentary": self.found_parliamentary}
+
     def save_to_db(self):
         db.session.add(self)
         db.session.commit()
