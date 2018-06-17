@@ -8,7 +8,8 @@ from resources.test import TestModel, Test, CRUDTest
 from resources.question import QuestionModel, CRUDquestions
 from resources.user import UserModel, User
 from models.interpretation import InterpretationModel
-from resources.voter import Voter, VoterModel
+from resources.voter import Voter, VoterModel, SearchVoterModel
+from resources.foundOrNotEP import FoundOrNot, FoundOrNotModel
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
@@ -30,6 +31,7 @@ api.add_resource(CRUDquestions, '/CRUD/questions/<int:test_id>')
 api.add_resource(Test, '/tests/<int:id>')
 api.add_resource(User, '/tests/results')
 api.add_resource(Voter, '/tests/voter')
+api.add_resource(FoundOrNot, '/tests/found_not_found')
 
 if __name__ == '__main__':
     from db import db

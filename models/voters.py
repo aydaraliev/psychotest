@@ -24,14 +24,13 @@ class VoterModel(db.Model):
         self.presidential = presidential
 
     def json(self):
-        print({"firstname": self.firstname, "lastname": self.lastname,
-                "patronym": self.patronym, "birthday": self.birthday, "voting_place": self.voting_place})
         return {"firstname": self.firstname, "lastname": self.lastname,
-                "patronym": self.patronym, "birthday": self.birthday, "voting_place": self.voting_place}
+                "patronym": self.patronym, "birthday": self.birthday, "voting_place": self.voting_place,
+                "parliamentary": self.parliamentary, "presidential": self.presidential}
 
     @classmethod
-    def find_voter(cls, firstname, lastname):
-        return cls.query.filter_by(firstname=firstname.upper()).filter_by(lastname=lastname.upper())
+    def find_voter(cls, firstname, lastname, birthday):
+        return cls.query.filter_by(firstname=firstname.upper()).filter_by(lastname=lastname.upper()).filter_by(birthday=birthday)
 
     def save_to_db(self):
         db.session.add(self)

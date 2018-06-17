@@ -68,7 +68,7 @@ def parse_excel_presidential(excel_path):
 
 
 def parse_excel_parliamentary(excel_path):
-    df = pd.read_excel(excel_path, header=1)
+    df = pd.read_excel(excel_path) #header=1
     df = df[df['Names'] != 'Names']
     df_uulu = df[df['Names'].str.contains(' УУЛУ | КЫЗЫ ')]
     df_not_uulu = df[~df['Names'].str.contains(' УУЛУ | КЫЗЫ ')]
@@ -131,18 +131,24 @@ def parse_excel_parliamentary(excel_path):
 #parl_u, parl_nu = parse_excel_parliamentary('elections/Parliamentary/Parliamentary.xlsx')
 
 if __name__ == '__main__':
-    presidential = []
-    parliamentary = []
-    for file in os.listdir('elections/Presidential/'):
-        presidential.append(parse_excel_presidential('elections/Presidential/'+file))
-    for file in os.listdir('elections/Parliamentary'):
-        parliamentary.append(parse_excel_parliamentary('elections/Parliamentary/' + file))
+    pres = parse_excel_presidential('elections/Presidential/test_data_pres.xlsx')
+    parl = parse_excel_parliamentary('elections/Parliamentary/test_data_parl.xlsx')
+    to_db = pd.concat([pres,parl], axis=0)
+    to_db.sort_values(['firstname', "lastname"]).reset_index(drop=True)
+    to_db.to_sql('voters', con=engine, if_exists='append', index=False)
 
-    presidential = pd.concat(presidential, axis=0)
-    parliamentary = pd.concat(parliamentary, axis=0)
-    to_db = pd.concat([presidential, parliamentary], axis=0)
-    to_db.sort_values(['firstname', 'lastname']).reset_index(drop=True)
-    to_db.to_sql('voters', con=engine, if_exists='append', index=False, chunksize=10000)
+    # presidential = []
+    # parliamentary = []
+    # for file in os.listdir('elections/Presidential/'):
+    #     presidential.append(parse_excel_presidential('elections/Presidential/'+file))
+    # for file in os.listdir('elections/Parliamentary'):
+    #     parliamentary.append(parse_excel_parliamentary('elections/Parliamentary/' + file))
+    #
+    # presidential = pd.concat(presidential, axis=0)
+    # parliamentary = pd.concat(parliamentary, axis=0)
+    # to_db = pd.concat([presidential, parliamentary], axis=0)
+    # to_db.sort_values(['firstname', 'lastname']).reset_index(drop=True)
+    # to_db.to_sql('voters', con=engine, if_exists='append', index=False, chunksize=10000)
 
 #results = parse_excel_presidential('elections/Presidential/MID.xlsx')
 #results.to_sql('voters', con=engine, if_exists='append', index=False)

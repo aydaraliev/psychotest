@@ -1,4 +1,5 @@
 from db import db
+from uuid import uuid4
 
 
 class TestModel(db.Model):
@@ -13,7 +14,8 @@ class TestModel(db.Model):
         self.name = name
 
     def json(self):
-        return {'name': self.name, 'questions': [question.json() for question in self.questions.all()]}
+        return {'name': self.name, 'questions': [question.json() for question in self.questions.all()],
+                'uuid4': str(uuid4())}
 
     @classmethod
     def find_by_id(cls, id):

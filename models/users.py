@@ -23,15 +23,22 @@ class UserModel(db.Model):
     gender = db.Column(db.String)
     nationality = db.Column(db.String)
     sendEmail = db.Column(db.Boolean)
-    work = db.String
+    work = db.Column(db.String)
+
+    responses = db.Column(db.String)
+    uuid4 = db.Column(db.String)
 
     def __init__(self, extraversion, neuroticism, openness, consciousness, friendly,
-                 city, country, dob, education, email, gender, nationality, family = None, work = None, sendEmail = False):
+                 city, country, dob, education, email, gender, nationality,
+                 responses, uuid4, family=None, work=None, sendemail=False):
         self.extraversion = extraversion
         self.neuroticism = neuroticism
         self.openness = openness
         self.consciousness = consciousness
         self.friendly = friendly
+
+        self.responses = responses
+        self.uuid4 = uuid4
 
         self.dob = dob
         self.gender = gender
@@ -42,6 +49,7 @@ class UserModel(db.Model):
         self.city = city
         self.country = country
         self.email = email
+        self.sendEmail = sendemail
 
     def calculate_results(self):
         results = []
@@ -70,7 +78,7 @@ class UserModel(db.Model):
         return results
 
         #[{"title": 'extraversion', "subtitle": "bla bla", "text": "bla bla"},
-         #{"title": "neuroticism", "subtitle": "zaebal etot test", "text": "bla bla"}]
+        #{"title": "neuroticism", "subtitle": "zaebal etot test", "text": "bla bla"}]
 
 
     def save_to_db(self):
