@@ -52,7 +52,7 @@ export class TestResultsComponent implements DoCheck, OnInit {
       case ('neuroticism'):
         return 'Нейротизм';
 
-      case ('openness '):
+      case ('openness'):
         return 'Открытость';
 
       case ('consciousness'):

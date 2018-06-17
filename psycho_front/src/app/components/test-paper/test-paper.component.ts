@@ -76,6 +76,7 @@ export class TestPaperComponent implements OnInit, DoCheck {
       };
 
       this.langService.saveResults(sendingObject);
+      localStorage.setItem('questions', JSON.stringify(this.questions));
 
       this.router.navigate(['/voted']);
     }
