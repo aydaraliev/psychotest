@@ -15,17 +15,31 @@ export class VotedComponent {
   matches = [];
   sended = false;
   voter = null;
+  president = [];
+  parlament = [];
   constructor(
     private langService: LanguageService,
     private router: Router
   ) { }
 
   findVoted (firstName: string, secondName: string, birthday: string) :void {
+    this.voter = null;
+    this.matches = [];
+    this.president = [];
+    this.parlament = [];
+    
     this.langService.findVoted(firstName, secondName, birthday)
       .subscribe(
         response => {
           this.sended = true;
           this.matches = response.matches;
+          response.matches.map(item => {
+            if (item.presidential) {
+              this.president.push(item);
+            } else {
+              this.parlament.push(item);
+            }
+          })
         },
         error => {
           console.log(error);
@@ -47,4 +61,16 @@ export class VotedComponent {
   foundNotFound (voter) :void {
     this.langService.foundNotFound(voter).subscribe()
   }
+
+  selectVoter (voter: Object) :void {
+    if (!this.voter) {
+      this.voter = voter;
+    } else {
+      if (this.voter.presidential) {
+        this.voter.parliamentary = true;
+      } else {
+        this.voter.presidential = true;
+      }
+    }
+  };
 }
