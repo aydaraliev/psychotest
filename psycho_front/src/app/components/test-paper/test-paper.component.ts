@@ -45,6 +45,7 @@ export class TestPaperComponent implements OnInit, DoCheck {
         response => {
           this.title = response.name;
           this.questions = response.questions;
+          localStorage.setItem('uuid4', JSON.stringify(response.uuid4));
         },
         error => console.log(error)
       );

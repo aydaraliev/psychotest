@@ -1,9 +1,5 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
-html {
-  height: 100%;
-}
-
 .container-fluid {
   margin: 0 auto;
   max-width: 1000px;

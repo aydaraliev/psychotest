@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
-import {QuestionsResponse} from '../classes/questionsResponse';
+import { QuestionsResponse } from '../classes/questionsResponse';
 import { Response} from "../classes/response";
-import {Voter} from "../classes/voter";
+import { Voter } from "../classes/voter";
+import { VoterObject } from "../classes/voterObject";
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -11,9 +12,8 @@ const httpOptions = {
 
 @Injectable()
 export class LanguageService {
-  private apiUrl = 'http://127.0.0.1:5000' //'http://188.166.88.156';  // URL to web
+  private apiUrl = 'http://188.166.88.156'; //'http://188.166.88.156';  // URL to web
   object = null;
-  textResults = null;
 
   constructor(
     private http: HttpClient,
@@ -44,7 +44,8 @@ export class LanguageService {
     const sendingObject = {
       user: object,
       results: JSON.parse(localStorage.getItem('results')),
-      voter: JSON.parse(localStorage.getItem('voter'))
+      voter: JSON.parse(localStorage.getItem('voter')),
+      responses: JSON.parse(localStorage.getItem('backQuestions')),
     };
     // localStorage.removeItem('results');
     localStorage.removeItem('voter');
@@ -53,12 +54,25 @@ export class LanguageService {
 
   findVoted (lastname: string, firstname: string, birthday: string): Observable<Voter> {
     const url = `${this.apiUrl}/tests/voter`;
-    const sendingObject = { firstname, lastname, birthday };
+    const uuid4 = JSON.parse(localStorage.getItem('uuid4'));
+
+    const sendingObject = { firstname, lastname, birthday, uuid4 };
 
     return this.http.post<Voter>(url, sendingObject, httpOptions)
   };
 
   getResults () {
     return JSON.parse(localStorage.getItem('text-results'));
+  }
+
+  foundNotFound (voter): Observable<VoterObject> {
+    const url = `${this.apiUrl}/tests/found_not_found`;
+    const uuid4 = JSON.parse(localStorage.getItem('uuid4'));
+    const found_presidential = voter.presidential;
+    const found_parliamentary = voter.parliamentary;
+
+    const sendingObject = { found_presidential, found_parliamentary, uuid4 };
+
+    return this.http.post<VoterObject>(url, sendingObject, httpOptions);
   }
 }

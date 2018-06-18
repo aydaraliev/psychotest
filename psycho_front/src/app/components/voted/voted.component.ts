@@ -40,6 +40,11 @@ export class VotedComponent {
 
   tagVoter (voter: Object) :void {
     localStorage.setItem('voter', JSON.stringify(voter));
+    this.foundNotFound(voter);
     this.router.navigate(['/feedback']);
   };
+
+  foundNotFound (voter) :void {
+    this.langService.foundNotFound(voter).subscribe()
+  }
 }
