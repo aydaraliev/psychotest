@@ -31,7 +31,7 @@ class UserModel(db.Model):
 
     def __init__(self, extraversion, neuroticism, openness, consciousness, friendly,
                  city, country, dob, education, email, gender, nationality,
-                 responses, uuid4, family=None, work=None, sendEmail=False, ru_language=False):
+                 responses, uuid4, family=None, work=None, sendEmail=False, ru_language=True):
         self.extraversion = extraversion
         self.neuroticism = neuroticism
         self.openness = openness

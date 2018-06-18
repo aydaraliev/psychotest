@@ -1,5 +1,6 @@
 from flask_restful import Resource, reqparse
 from models.users import UserModel
+from misc import send_email
 
 
 class User(Resource):
@@ -9,6 +10,15 @@ class User(Resource):
 
     def post(self):
         data = self.parser.parse_args()
+
+        data['user']['responses'] = str(data['user']['responses'])
         user = UserModel(**data['results'], **data['user'])
         user.save_to_db()
-        return {"response": user.calculate_results()}
+        user_results = user.calculate_results()
+
+        if data['user']['sendEmail'] == True:
+            send_email.send_email('aidaraliev@gmail.com', 'asdasd',
+                                  'aidaraliev@gmail.com',
+                                  'Результаты теста на определение личностных качеств', user_results)
+
+        return {"response": user_results}

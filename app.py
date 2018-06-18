@@ -24,6 +24,7 @@ app.config['PROPAGATE_EXCEPTIONS'] = True
 app.secret_key = 'rust4m'
 
 
+
 # CRUD
 api.add_resource(CRUDTest, '/CRUD/tests/<string:name>')
 api.add_resource(CRUDquestions, '/CRUD/questions/<int:test_id>')

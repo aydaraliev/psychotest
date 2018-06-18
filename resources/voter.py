@@ -24,8 +24,6 @@ class Voter(Resource):
             lname = lname.split()
             lname = ' '.join(lname[::-1])
 
-        print(fname, 'del', lname, bday)
-
         save_search = SearchVoterModel(data['uuid4'], bday, fname, lname.upper())
         save_search.save_to_db()
 
