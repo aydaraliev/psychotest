@@ -1,3 +1,6 @@
 export class Voter {
-  matches: [Object];
+  matches: [{
+    presidential: boolean,
+
+  }];
 }

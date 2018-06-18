@@ -27,7 +27,7 @@ export class VotedComponent {
     this.matches = [];
     this.president = [];
     this.parlament = [];
-    
+
     this.langService.findVoted(firstName, secondName, birthday)
       .subscribe(
         response => {

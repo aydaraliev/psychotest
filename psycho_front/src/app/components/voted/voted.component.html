@@ -4,7 +4,7 @@
 
   <div class="form-group">
     <label for="firstname">Фамилия</label>
-    <input class="form-control" id="firstname" minlength="3" name="firstname" type="text" [(ngModel)]="firstName" required>
+    <input class="form-control" id="firstname" minlength="2" name="firstname" type="text" [(ngModel)]="firstName" required>
     <button (click)="addLetter('Ң', 'firstName')">Ң</button>
     <button (click)="addLetter('ң', 'firstName')">ң</button>
     <button (click)="addLetter('Ү', 'firstName')">Ү</button>
@@ -15,7 +15,7 @@
 
   <div class="form-group">
     <label for="secondname">Имя</label>
-    <input class="form-control" id="secondname" minlength="3" name="secondname" type="text" [(ngModel)]="secondName" required>
+    <input class="form-control" id="secondname" minlength="2" name="secondname" type="text" [(ngModel)]="secondName" required>
     <button (click)="addLetter('Ң', 'secondName')">Ң</button>
     <button (click)="addLetter('ң', 'secondName')">ң</button>
     <button (click)="addLetter('Ү', 'secondName')">Ү</button>
@@ -26,7 +26,14 @@
 
   <div class="form-group">
     <label for="birthday">День рождения</label>
-    <input class="form-control" id="birthday" name="birthday" type="date" [(ngModel)]="birthday" required>
+    <input
+      class="form-control"
+      id="birthday"
+      name="birthday"
+      type="date"
+      [(ngModel)]="birthday"
+      required
+    >
   </div>
 
   <div class="form-group row justify-content-end">
