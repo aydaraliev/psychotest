@@ -11,6 +11,7 @@ import {LanguageService} from "../../services/language.service";
 export class VotedComponent {
   firstName = '';
   secondName = '';
+  birthday = '';
   matches = [];
   sended = false;
   voter = null;
@@ -19,11 +20,10 @@ export class VotedComponent {
     private router: Router
   ) { }
 
-  findVoted (firstName: string, secondName: string) :void {
-    this.langService.findVoted(firstName, secondName)
+  findVoted (firstName: string, secondName: string, birthday: string) :void {
+    this.langService.findVoted(firstName, secondName, birthday)
       .subscribe(
         response => {
-          console.log(response.matches);
           this.sended = true;
           this.matches = response.matches;
         },

@@ -1,4 +1,4 @@
-<form class="container-fluid item-container new-page" #votedForm="ngForm" (ngSubmit)="findVoted(firstName, secondName)">
+<form class="container-fluid item-container new-page" #votedForm="ngForm" (ngSubmit)="findVoted(firstName, secondName, birthday)">
   <h1>Найдите себя в списке проголосовавших</h1>
   <p>Список проголосовавших является общественно доступной информацией и находится на сайте Центральной Избирательной Комиссии КР</p>
 
@@ -10,6 +10,11 @@
   <div class="form-group">
     <label for="secondname">Имя</label>
     <input class="form-control" id="secondname" minlength="3" name="secondname" type="text" [(ngModel)]="secondName" required>
+  </div>
+
+  <div class="form-group">
+    <label for="birthday">День рождения</label>
+    <input class="form-control" id="birthday" name="birthday" type="date" [(ngModel)]="birthday" required>
   </div>
 
   <div class="form-group row justify-content-end">
