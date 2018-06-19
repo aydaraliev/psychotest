@@ -54,6 +54,7 @@ export class VotedComponent {
 
   tagVoter (voter: Object): void {
     localStorage.setItem('voter', JSON.stringify(voter));
+    localStorage.setItem('dob', JSON.stringify(this.birthday));
     this.foundNotFound(voter);
     this.router.navigate(['/feedback']);
   }
@@ -75,6 +76,7 @@ export class VotedComponent {
   }
 
   notFound (): void {
+    localStorage.setItem('dob', JSON.stringify(this.birthday));
     const voter = {
       presidential: false,
       parliamentary: false

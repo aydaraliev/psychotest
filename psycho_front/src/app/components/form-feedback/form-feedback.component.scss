@@ -9,6 +9,7 @@ p {
 
 .form-group {
   margin-bottom: 15px;
+  position: relative;
 
   label {
     font-weight: 300;
@@ -66,4 +67,13 @@ p {
     width: 15px;
     margin-left: 25px;
   }
+}
+
+.input-glass {
+  position: absolute;
+  width: calc(100% - 45px);
+  height: calc(100% - 32px);
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  left: 0;
 }

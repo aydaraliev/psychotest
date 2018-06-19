@@ -15,7 +15,8 @@
 .input-glass {
   position: absolute;
   width: calc(100% - 45px);
-  height: 100%;
-  top: 0;
+  height: calc(100% - 32px);
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 0;
   left: 0;
 }

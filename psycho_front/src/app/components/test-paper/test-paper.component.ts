@@ -67,6 +67,7 @@ export class TestPaperComponent implements OnInit, DoCheck {
       this.calculateResults();
     } else {
       this.questions[this.currentQuestion].value = value;
+      this.currentQuestion += 1;
       this.calculateResults();
       const sendingObject = {
         extraversion: this.extraversion,
