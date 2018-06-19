@@ -17,8 +17,8 @@ class User(Resource):
         user_results = user.calculate_results()
 
         if data['user']['sendEmail'] == True:
-            send_email.send_email('aidaraliev@gmail.com', 'asdasd',
-                                  'aidaraliev@gmail.com',
+            send_email.send_email('aidaraliev@gmail.com', 'password_here',
+                                  'archer1strong@gmail.com',
                                   'Результаты теста на определение личностных качеств', user_results)
 
         return {"response": user_results}

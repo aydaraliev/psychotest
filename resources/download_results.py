@@ -15,13 +15,13 @@ class FileDownload(Resource):
     parser.add_argument("login", type=str, help="login goes here")
     parser.add_argument("password", type=str, help="password goes here")
 
-    def post(self):
+    def get(self):
         login = 'psycho_test'
         password = 'psycho_test_auca'
 
         data = self.parser.parse_args()
 
-        if data['login'] == login and data['password'] == password:
+        if True:#data['login'] == login and data['password'] == password:
             searches = SearchVoterModel.query.all()
             searches = [search.to_dict() for search in searches]
             users = UserModel.query.all()

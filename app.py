@@ -34,7 +34,7 @@ api.add_resource(Test, '/tests/<int:id>')
 api.add_resource(User, '/tests/results')
 api.add_resource(Voter, '/tests/voter')
 api.add_resource(FoundOrNot, '/tests/found_not_found')
-api.add_resource(FileDownload, '/tests/get_all_users')
+api.add_resource(FileDownload, '/tests/cbac5cc3-d1d4-4390-94e8-5541e083630b')
 
 if __name__ == '__main__':
     from db import db

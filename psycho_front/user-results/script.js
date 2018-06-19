@@ -7,7 +7,7 @@ document.getElementById('button').addEventListener('click', function () {
 
     var request = new XMLHttpRequest();
     request.open('POST', 'http://http://188.166.88.156/tests/get_all_users', true);
-    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+    request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
     var params = JSON.stringify({ login: login, password: password });
     request.responseType = 'blob';
 
@@ -17,10 +17,10 @@ document.getElementById('button').addEventListener('click', function () {
         // Try to find out the filename from the content disposition `filename` value
         var disposition = request.getResponseHeader('content-disposition');
         var matches = /"([^"]*)"/.exec(disposition);
-        var filename = (matches != null && matches[1] ? matches[1] : 'file.pdf');
+        var filename = (matches != null && matches[1] ? matches[1] : 'data.xlsx');
 
         // The actual download
-        var blob = new Blob([request.response], { type: 'application/pdf' });
+        var blob = new Blob([request.response], { type: 'application/xlsx' });
         var link = document.createElement('a');
         link.href = window.URL.createObjectURL(blob);
         link.download = filename;
