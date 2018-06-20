@@ -17,10 +17,10 @@ class Voter(Resource):
         fname = data["firstname"].strip().upper()
         lname = data["lastname"].strip().upper()
 
-        if lname.endswith("УУЛУ"):
+        if not lname.endswith("УУЛУ"):
             lname = lname.split()
             lname = ' '.join(lname[::-1])
-        elif lname.endswith("КЫЗЫ"):
+        elif not lname.endswith("КЫЗЫ"):
             lname = lname.split()
             lname = ' '.join(lname[::-1])
 

@@ -45,8 +45,8 @@ def parse_excel_presidential(excel_path):
 
     for name in df_uulu['Names']:
         name = name.split()
-        first_name.append(name[0])
-        last_name.append(name[1] + ' ' + name[2])
+        first_name.append(name[2])
+        last_name.append(name[0] + ' ' + name[1])
 
     parliamentary = [False] * len(first_name)
     presidential = [True] * len(last_name)
@@ -106,8 +106,8 @@ def parse_excel_parliamentary(excel_path):
 
     for name in df_uulu['Names']:
         name = name.split()
-        first_name.append(name[0])
-        last_name.append(name[1] + ' ' + name[2])
+        first_name.append(name[2])
+        last_name.append(name[0] + ' ' + name[1])
 
     parliamentary = [True] * len(first_name)
     presidential = [False] * len(last_name)
