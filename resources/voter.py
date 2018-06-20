@@ -13,7 +13,6 @@ class Voter(Resource):
     def post(self):
         data = self.parser.parse_args()
         bday = data['birthday']
-        bday = '.'.join(bday.split('-')[::-1])
         fname = data["firstname"].strip().upper()
         lname = data["lastname"].strip().upper()
 
