@@ -19,7 +19,7 @@ export class FormFeedbackComponent implements DoCheck {
   work = '';
   city = '';
   email = '';
-  sendEmail = '';
+  sendEmail = false;
 
   constructor(
     private langService: LanguageService,
