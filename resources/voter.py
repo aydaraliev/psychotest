@@ -17,18 +17,12 @@ class Voter(Resource):
         fname = data["firstname"].strip().upper()
         lname = data["lastname"].strip().upper()
 
-        print(fname)
-        print(lname)
-
         if lname.startswith("УУЛУ"):
             lname = lname.split()
             lname = ' '.join(lname[::-1])
         elif lname.startswith("КЫЗЫ"):
             lname = lname.split()
             lname = ' '.join(lname[::-1])
-
-        print(fname)
-        print(lname)
 
         save_search = SearchVoterModel(data['uuid4'], bday, fname, lname.upper())
         save_search.save_to_db()
