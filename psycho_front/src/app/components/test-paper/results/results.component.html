@@ -1,65 +1,51 @@
-<div
-  [ngClass]="{
-      'results':true,
-      'results--folded': !isToggle
-    }"
->
+<div class="container-fluid">
+  <div class="col-sm-6">
+    <h3>Ваша личность</h3>
 
-  <div class="results-toggle" (click)="toggleResults()">
-    <div *ngIf="isToggle" class="arrow arrow--up"></div>
-    <div *ngIf="!isToggle" class="arrow arrow--down"></div>
-    Результаты
-  </div>
-
-  <div class="container-fluid">
-    <div class="col-sm-6">
-      <h3>Ваша личность</h3>
-
-      <div class="result">
-        <p>Экстраверсия</p>
-        <div class="progress">
-          <div class="progress--bar" [style.width.%]="extraversion">
-            <span *ngIf="extraversion > 0">{{extraversion}} %</span>
-          </div>
+    <div class="result">
+      <p>Экстраверсия</p>
+      <div class="progress">
+        <div class="progress--bar" [style.width.%]="extraversion">
+          <span *ngIf="extraversion > 0">{{extraversion}} %</span>
         </div>
       </div>
+    </div>
 
-      <div class="result">
-        <p>Нейротизм</p>
-        <div class="progress">
-          <div class="progress--bar" [style.width.%]="neuroticism">
-            <span *ngIf="neuroticism > 0">{{neuroticism}} %</span>
-          </div>
+    <div class="result">
+      <p>Нейротизм</p>
+      <div class="progress">
+        <div class="progress--bar" [style.width.%]="neuroticism">
+          <span *ngIf="neuroticism > 0">{{neuroticism}} %</span>
         </div>
       </div>
+    </div>
 
-      <div class="result">
-        <p>Открытость</p>
-        <div class="progress">
-          <div class="progress--bar" [style.width.%]="openness">
-            <span *ngIf="openness > 0">{{openness}} %</span>
-          </div>
+    <div class="result">
+      <p>Открытость</p>
+      <div class="progress">
+        <div class="progress--bar" [style.width.%]="openness">
+          <span *ngIf="openness > 0">{{openness}} %</span>
         </div>
       </div>
+    </div>
 
-      <div class="result">
-        <p>Сознательность</p>
-        <div class="progress">
-          <div class="progress--bar" [style.width.%]="consciousness">
-            <span *ngIf="consciousness > 0">{{consciousness}} %</span>
-          </div>
+    <div class="result">
+      <p>Сознательность</p>
+      <div class="progress">
+        <div class="progress--bar" [style.width.%]="consciousness">
+          <span *ngIf="consciousness > 0">{{consciousness}} %</span>
         </div>
       </div>
+    </div>
 
-      <div class="result">
-        <p>Доброжелательность</p>
-        <div class="progress">
-          <div class="progress--bar" [style.width.%]="friendly">
-            <span *ngIf="friendly > 0">{{friendly}} %</span>
-          </div>
+    <div class="result">
+      <p>Доброжелательность</p>
+      <div class="progress">
+        <div class="progress--bar" [style.width.%]="friendly">
+          <span *ngIf="friendly > 0">{{friendly}} %</span>
         </div>
       </div>
     </div>
   </div>
-
 </div>
+

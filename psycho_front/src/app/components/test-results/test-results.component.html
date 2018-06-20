@@ -1,6 +1,15 @@
 <div class="container-fluid item-container new-page">
   <h1>Спасибо</h1>
 
+  <app-results
+    [extraversion]="extraversion"
+    [neuroticism]="neuroticism"
+    [openness]="openness"
+    [consciousness]="consciousness"
+    [friendly]="friendly"
+  >
+  </app-results>
+
   <div *ngIf="!info">Загрузка...</div>
 
   <div class="col-md-12" *ngIf="info">
@@ -10,13 +19,4 @@
       <p>{{result.text}}}</p>
     </div>
   </div>
-
-  <app-results
-    [extraversion]="extraversion"
-    [neuroticism]="neuroticism"
-    [openness]="openness"
-    [consciousness]="consciousness"
-    [friendly]="friendly"
-  >
-  </app-results>
 </div>
