@@ -12,7 +12,7 @@ const httpOptions = {
 
 @Injectable()
 export class LanguageService {
-  private apiUrl = 'https://188.166.88.156';
+  private apiUrl = 'https://personality.kg';
   object = null;
 
   constructor(
