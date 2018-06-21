@@ -47,9 +47,9 @@ export class FormFeedbackComponent implements DoCheck {
       .subscribe(
         response => {
           localStorage.setItem('text-results', JSON.stringify(response.response));
+          this.router.navigate(['/results']);
         },
         error => console.log(error)
       );
-    this.router.navigate(['/results']);
   }
 }

@@ -1,4 +1,4 @@
-import { Component, DoCheck } from '@angular/core';
+import {Component, DoCheck, OnInit} from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { Router } from '@angular/router';
 
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./welcome.component.scss'],
   providers: [LanguageService]
 })
-export class WelcomeComponent implements DoCheck {
+export class WelcomeComponent implements DoCheck, OnInit {
   lang = 0;
 
   constructor(
@@ -23,6 +23,11 @@ export class WelcomeComponent implements DoCheck {
 
   ngDoCheck() {
     this.lang = Number(localStorage.lang);
+  }
+
+  ngOnInit() {
+    localStorage.removeItem('text-results');
+    localStorage.removeItem('results');
   }
 
 }

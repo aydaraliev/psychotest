@@ -64,10 +64,6 @@ export class LanguageService {
     return this.http.post<Voter>(url, sendingObject, httpOptions)
   }
 
-  getResults () {
-    return JSON.parse(localStorage.getItem('text-results'));
-  }
-
   foundNotFound (voter): Observable<VoterObject> {
     const url = `${this.apiUrl}/tests/found_not_found`;
     const uuid4 = JSON.parse(localStorage.getItem('uuid4'));
