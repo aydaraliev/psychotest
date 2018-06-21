@@ -12,7 +12,7 @@ const httpOptions = {
 
 @Injectable()
 export class LanguageService {
-  private apiUrl = 'http://188.166.88.156'; //'http://188.166.88.156';  // URL to web
+  private apiUrl = 'https://188.166.88.156';
   object = null;
 
   constructor(
@@ -37,7 +37,7 @@ export class LanguageService {
 
   saveResults (object: any) {
     return localStorage.setItem('results', JSON.stringify(object));
-  };
+  }
 
   sendUser (object: any): Observable<Response> {
     const url = `${this.apiUrl}/tests/results`;
@@ -53,7 +53,7 @@ export class LanguageService {
     // localStorage.removeItem('results');
     localStorage.removeItem('voter');
     return this.http.post<Response>(url, sendingObject, httpOptions);
-  };
+  }
 
   findVoted (lastname: string, firstname: string, birthday: string): Observable<Voter> {
     const url = `${this.apiUrl}/tests/voter`;
@@ -62,7 +62,7 @@ export class LanguageService {
     const sendingObject = { firstname, lastname, birthday, uuid4 };
 
     return this.http.post<Voter>(url, sendingObject, httpOptions)
-  };
+  }
 
   getResults () {
     return JSON.parse(localStorage.getItem('text-results'));

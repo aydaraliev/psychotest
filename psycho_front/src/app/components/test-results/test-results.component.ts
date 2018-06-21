@@ -1,6 +1,6 @@
 import { Component, DoCheck, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {LanguageService} from "../../services/language.service";
+import {LanguageService} from '../../services/language.service';
 
 @Component({
   selector: 'app-test-results',
@@ -22,29 +22,40 @@ export class TestResultsComponent implements DoCheck, OnInit {
   ) { }
 
   ngOnInit() {
-    // JSON.parse(localStorage.getItem('results'))
     setTimeout(() => {
-      this.info = this.langService.getResults();
-      const psychoParams = JSON.parse(localStorage.getItem('results'));
+      this.renderResults();
+    }, 1000);
 
-      this.extraversion = psychoParams.extraversion;
-      this.neuroticism = psychoParams.neuroticism;
-      this.openness = psychoParams.openness;
-      this.consciousness = psychoParams.consciousness;
-      this.friendly = psychoParams.friendly;
+    setTimeout(() => {
+      this.renderResults();
+    }, 1000);
+
+    setTimeout(() => {
+      this.renderResults();
     }, 1000);
 
     setTimeout(() => {
       localStorage.removeItem('text-results');
       localStorage.removeItem('results');
-    }, 3000)
+    }, 3000);
   }
 
   ngDoCheck() {
-    this.lang = Number(localStorage.lang);
+    // this.lang = Number(localStorage.lang);
   }
 
-  changeTitle (title: string) :string {
+  renderResults () {
+    this.info = this.langService.getResults();
+    const psychoParams = JSON.parse(localStorage.getItem('results'));
+
+    this.extraversion = psychoParams.extraversion;
+    this.neuroticism = psychoParams.neuroticism;
+    this.openness = psychoParams.openness;
+    this.consciousness = psychoParams.consciousness;
+    this.friendly = psychoParams.friendly;
+  }
+
+  changeTitle (title: string): string {
     switch (title) {
       case ('extraversion'):
         return 'Экстраверсия';
