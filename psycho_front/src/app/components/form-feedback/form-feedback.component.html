@@ -5,13 +5,12 @@
     <label for="dob">День рождения <b>*</b></label>
     <p>Дату надо вводить в формате месяц/день/год</p>
     <input
-      class="form-control"
-      id="dob"
       name="dob"
-      type="date"
-      required
-      [(ngModel)]="dob"
-    >
+      id="dob"
+      type='text'
+      class="datepicker-here"
+      data-position="right top"
+    />
   </div>
 
   <div class="form-group">
@@ -104,7 +103,7 @@
     <button
       class="form-button form-button--submit"
       type="submit"
-      [disabled]="authForm.invalid"
+      [disabled]="authForm.invalid || dob === ''"
     >
       Отправить
     </button>

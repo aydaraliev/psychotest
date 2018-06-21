@@ -28,19 +28,18 @@
     <label for="birthday">День рождения</label>
     <p>Дату надо вводить в формате месяц/день/год</p>
     <input
-      class="form-control"
-      id="birthday"
       name="birthday"
-      type="date"
-      [(ngModel)]="birthday"
-      required
-    >
+      id="birthday"
+      type='text'
+      class="datepicker-here"
+      data-position="right top"
+    />
   </div>
 
   <div class="form-group row justify-content-end">
     <button
       class="form-button form-button--submit default-button"
-      [disabled]="votedForm.invalid"
+      [disabled]="(birthday === '' || votedForm.invalid)"
       type="submit"
       (click)="findVoted(firstName, secondName, birthday)"
     >
