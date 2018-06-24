@@ -30,7 +30,7 @@ class VoterModel(db.Model):
 
     @classmethod
     def find_voter(cls, firstname, lastname, birthday):
-        return cls.query.filter_by(firstname=firstname.upper()).filter_by(lastname=lastname.upper()).filter_by(birthday=birthday)
+        return cls.query.filter_by(firstname=firstname.upper()).filter_by(lastname=lastname.upper()) #.filter_by(birthday=birthday)
 
     def save_to_db(self):
         db.session.add(self)
