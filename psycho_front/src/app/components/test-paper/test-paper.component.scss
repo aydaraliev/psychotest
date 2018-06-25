@@ -96,3 +96,9 @@
     left: 5px;
   }
 }
+
+@media (max-width: 375px) {
+  .question {
+    max-width: 100%;
+  }
+}
