@@ -17,7 +17,6 @@ export class ResultsComponent {
   constructor() { }
 
   toggleResults(): void {
-    console.log(1);
     this.isToggle = !this.isToggle;
   }
 
