@@ -1,7 +1,7 @@
 import {Component, DoCheck, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {LanguageService} from '../../services/language.service';
-declare var $: any;
+// declare var $: any;
 
 @Component({
   selector: 'app-voted',
@@ -25,12 +25,12 @@ export class VotedComponent implements DoCheck, OnInit {
   ) { }
 
   ngOnInit() {
-    $('#birthday').datepicker([]);
+    // $('#birthday').datepicker([]);
   }
 
   ngDoCheck() {
-    const inputElement = <HTMLInputElement>document.getElementById('birthday');
-    this.birthday = inputElement.value;
+    // const inputElement = <HTMLInputElement>document.getElementById('birthday');
+    // this.birthday = inputElement.value;
   }
 
   findVoted (firstName: string, secondName: string, birthday: string): void {

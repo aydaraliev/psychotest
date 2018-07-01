@@ -1,6 +1,7 @@
-import {Component, DoCheck} from '@angular/core';
+import {Component, DoCheck, OnInit} from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { Router } from '@angular/router';
+declare var $: any;
 
 @Component({
   selector: 'app-form-feedback',
@@ -9,8 +10,8 @@ import { Router } from '@angular/router';
   providers: [LanguageService]
 })
 
-export class FormFeedbackComponent implements DoCheck {
-  dob = JSON.parse(localStorage.getItem('dob')) || '';
+export class FormFeedbackComponent implements DoCheck, OnInit {
+  dob = '';
   gender = '';
   country = 'Кыргызская Республика';
   nationality = '';
@@ -26,7 +27,13 @@ export class FormFeedbackComponent implements DoCheck {
     private router: Router
   ) { }
 
+  ngOnInit() {
+    $('#dob').datepicker([]);
+  }
+
   ngDoCheck() {
+    const inputElement = <HTMLInputElement>document.getElementById('dob');
+    this.dob = inputElement.value;
     // this.lang = Number(localStorage.lang);
   }
 
