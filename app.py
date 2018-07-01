@@ -4,8 +4,7 @@ from flask import Flask
 from flask_restful import Api
 from flask_cors import CORS
 
-from resources.test import TestModel, Test, CRUDTest
-from resources.question import QuestionModel, CRUDquestions
+from resources.test import TestModel, Test
 from resources.user import UserModel, User
 from models.interpretation import InterpretationModel
 from resources.voter import Voter, VoterModel, SearchVoterModel
@@ -13,7 +12,7 @@ from resources.foundOrNotEP import FoundOrNot, FoundOrNotModel
 from resources.download_results import FileDownload
 
 app = Flask(__name__)
-app.config['DEBUG'] = True
+app.config['DEBUG'] = False
 CORS(app)
 
 api = Api(app)
@@ -22,12 +21,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db' #os.environ.get('DAT
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['PROPAGATE_EXCEPTIONS'] = True
 app.secret_key = 'rust4m'
-
-
-
-# CRUD
-api.add_resource(CRUDTest, '/CRUD/tests/<string:name>')
-api.add_resource(CRUDquestions, '/CRUD/questions/<int:test_id>')
 
 # front api
 api.add_resource(Test, '/tests/<int:id>')
