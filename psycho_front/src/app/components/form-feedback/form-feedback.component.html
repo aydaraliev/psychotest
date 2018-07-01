@@ -102,7 +102,7 @@
     <button
       class="form-button form-button--submit"
       type="submit"
-      [disabled]="authForm.invalid"
+      [disabled]="authForm.invalid || dob === ''"
     >
       Отправить
     </button>
