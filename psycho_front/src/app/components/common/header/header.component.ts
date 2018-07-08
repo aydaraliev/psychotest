@@ -10,7 +10,7 @@ declare function require(path: string);
 })
 export class HeaderComponent implements DoCheck {
   lang = 0;
-  imagePath = require('../../../../img/AUCA-Logo-2-tier-Left-COL22.png');
+  imagePath = require('../../../../img/auca_logo.png');
 
   constructor(
     private langService: LanguageService
