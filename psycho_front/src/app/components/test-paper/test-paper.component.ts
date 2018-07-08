@@ -61,14 +61,14 @@ export class TestPaperComponent implements OnInit, DoCheck {
    */
   onAnswer(value: number): void {
     this.calculateProgress();
+    this.calculateResults(value);
+
     if (this.currentQuestion !== this.questions.length - 1) {
       this.questions[this.currentQuestion].value = value;
       this.currentQuestion += 1;
-      this.calculateResults();
     } else {
       this.questions[this.currentQuestion].value = value;
       this.currentQuestion += 1;
-      this.calculateResults();
       const sendingObject = {
         extraversion: this.extraversion,
         neuroticism: this.neuroticism,
@@ -107,9 +107,8 @@ export class TestPaperComponent implements OnInit, DoCheck {
     this.currentPercent = this.count * 100 / this.questions.length;
   }
 
-  calculateResults(): void {
+  calculateResults(value: number): void {
     const id = this.questions[this.currentQuestion - 1].question_number;
-    const value = this.questions[this.currentQuestion - 1].value;
 
     if ((id + 4) % 5 === 0) {
       this.extraversion += ((value * 100) / 16);
