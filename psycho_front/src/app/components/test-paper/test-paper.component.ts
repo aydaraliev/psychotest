@@ -108,7 +108,7 @@ export class TestPaperComponent implements OnInit, DoCheck {
   }
 
   calculateResults(value: number): void {
-    const id = this.questions[this.currentQuestion - 1].question_number;
+    const id = this.questions[this.currentQuestion].question_number;
 
     if ((id + 4) % 5 === 0) {
       this.extraversion += ((value * 100) / 16);
